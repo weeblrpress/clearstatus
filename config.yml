@@ -1,0 +1,177 @@
+############################################################
+## Hugo ClearStatus config
+############################################################
+
+# Complete page title
+title: ClearStatus systems status page
+
+# Required for scheduled items
+buildFuture: true
+
+# Language config
+languageCode: en
+defaultContentLanguage: en
+# we suggest you use language based directory for your content
+# even if you only use one language. You may update to multlingual
+# at some point in the future.
+contentDir: "content/en"
+
+# Your deployed site URL
+baseUrl: "http://localhost:1313/"
+
+# Theme to use
+theme: clearstatustheme
+assetsDir: themes/clearstatustheme/assets
+
+############################################################
+## Status default config. Valid for ALL languages.
+############################################################
+
+params:
+  systems:
+    - name: Website
+      description: Our company public facing website
+      link: https://www.example.com/
+    - name: Helpdesk
+      description: Our company customer support site
+      link: https://support.example.com/
+
+  # dateFormat Default: "January 2, 2006 at 3:04 PM"
+  # shortDateFormat Default: "15:04 — Jan 2"
+  dateFormat: "January 2, 2006 at 3:04 PM"
+  shortDateFormat: "15:04 — Jan 2"
+  # This string will be displayed after each time displayed
+  # Set it for instance to " UTC" to indicate UTC times
+  # or a specific time zone, ie " America/New_York"
+  # You can also instead used a translated string per language
+  timezoneString: " UTC"
+
+  # Path to logo image from the /static folder.
+  logo: "/images/server_status.svg"
+
+  # Descriptions
+  meta_description: "This status page provides updated information about our systems normal operation, incidents that may happen and their resolution."
+  description_footer: "<a class='text-grey-darkest' title='Visit example.com' href='https://www.example.com/'>Example.com</a> provides open-source software for all kind of sectors."
+  description_header: "Information about <a class='text-grey-darkest' title='Visit example.com' href='https://www.example.com/'>example</a> systems operations.<br />Follow us <a class='text-grey-darkest' title='Visit our page on Twitter' href='https://www.twitter.com/example'>on Twitter</a> or subscribe to <a href='%s'>RSS</a><br />to be alerted of new events."
+
+  copyrightHolder: "Example Inc."
+
+  # Layout
+  incidentPostsPerPage: 10
+
+  ## Source for CSS
+  enablePostCSSProcessing: false
+  fullCSSSourceFile: "css/src/styles.css"
+  fullCSSDistFile: "css/dist/styles.css"
+  postCSSConfigFolder: "themes/clearstatustheme"
+
+  # Colors
+  bodyBackground: "bg-grey-lighter"
+  bodyColor: "text-grey-dark"
+  visibleBordersColor: "border-grey-dark"
+  bordersColor: "border-transparent"
+  headerBackground: "bg-white"
+  headerColor: "text-grey-darkest"
+  footerBackground: "bg-white"
+  footerColor: "text-grey-darkest"
+  componentsBackground: "bg-white"
+  componentsColor: "text-black"
+  componentsBorders: "border-grey-lighter"
+  refreshColor: "text-grey-dark"
+  paginationLinksColor: "text-grey-darkest"
+  disabledPaginationLinksColor: "text-grey-dark"
+
+  # Severity
+  defaultSeverityBackground: "bg-grey-light"
+  defaultSeverityColor: "text-black"
+  downSeverityBackground: "bg-red-dark"
+  downSeverityColor: "text-white"
+  disruptedSeverityBackground: "bg-orange-dark"
+  disruptedSeverityColor: "text-white"
+  monitoringSeverityBackground: "bg-orange"
+  monitoringSeverityColor: "text-white"
+  maintenanceSeverityBackground: "bg-grey-light"
+  maintenanceSeverityColor: "text-black"
+  okSeverityBackground: "bg-green-dark"
+  okSeverityColor: "text-white"
+
+  # Incident types
+  scheduledHeaderBackground: "bg-blue-lighter"
+  scheduledHeaderColor: "text-grey-dark"
+  scheduledHeaderTitleColor: "text-black"
+  scheduledBodyBackground: "bg-white"
+  scheduledBodyColor: "text-grey-darkest"
+  scheduledBodyTitleColor: "text-black"
+
+  smallBodyBackground: "bg-white"
+  smallBodyColor: "text-grey-darkest"
+  smallBodyTitleColor: "text-black"
+
+  pastBodyBackground: "bg-white"
+  pastBodyColor: "text-grey-darkest"
+  pastBodyTitleColor: "text-black"
+
+  ## Affected components
+  affectedBackground: "bg-grey-lighter"
+  affectedColor: "text-grey-darkest"
+
+############################################################
+## Language config. Override params per language as needed.
+############################################################
+# To enable multilingual support:
+# - Remove the leading # of the section below
+# - Adjust the language list as needed
+# - create per-language folders in the content section
+# - place your issues in per-language folder
+# - eg: spanish version of issues go into /content/es/issues
+# - be sure to properly set the contentDir to /content/xx
+#  where xx matches the language code
+#
+# A language switcher will be displayed near top of page
+# when several languages are defined.
+#
+############################################################
+
+#defaultContentLanguageInSubdir: false
+#
+#languages:
+#  en:
+#    weight: 1
+#    contentDir: content/en
+#    languageName: English
+#  fr:
+#    title: Etat de nos systèmes
+#    weight: 2
+#    contentDir: content/fr
+#    languageCode: fr
+#    languageName: Français
+#    params:
+#      systems:
+#        - name: Website
+#          description: Le site web de notre société
+#          link: https://www.example.fr/
+#        - name: Support
+#          description: Notre site de support
+#          link: https://support.example.fr/
+#
+#  es:
+#    title: Nuestra página de estado
+#    weight: 3
+#    contentDir: content/es
+#    languageCode: es
+#    languageName: Español
+
+
+############################################################
+## Do not change!!
+############################################################
+
+disableKinds:
+  - section
+  - taxonomy
+  - taxonomyTerm
+  - sitemap
+
+blackfriday:
+  extensions:
+    - hardLineBreak
