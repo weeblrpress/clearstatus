@@ -1,4 +1,4 @@
-<p align="center"><img style="width: 300px" src="https://cdn.weeblrpress.net/clearstatus/assets/images/clearstatus.svg" alt="ClearStatus illustration"></p>
+<p align="center">![ClearStatus Illustration](https://cdn.weeblrpress.net/clearstatus/assets/images/clearstatus.svg)></p>
 
 You run a website or an app? Have one or more systems your customers/community depends on? if something goes wrong and your site is down, we think what matters most is that you are able to communicate clearly and easily with your users: be transparent about the problem, what you do to solve it and when you're or will be back online.
 
