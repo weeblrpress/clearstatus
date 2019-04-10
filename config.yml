@@ -16,8 +16,8 @@ defaultContentLanguage: en
 # at some point in the future.
 contentDir: "content/en"
 
-# Your deployed site URL
-baseUrl: "http://localhost:1313/"
+# Your deployed site URL. Not needed in many cases.
+# baseUrl: "http://localhost:1313/"
 
 # Theme to use
 theme: clearstatustheme
