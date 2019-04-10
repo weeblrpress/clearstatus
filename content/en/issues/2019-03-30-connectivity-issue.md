@@ -1,5 +1,5 @@
 ---
-title: Connectivity failure
+title: Connectivity issue
 
 draft: false
 
