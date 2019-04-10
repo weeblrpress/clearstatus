@@ -47,7 +47,7 @@ params:
   timezoneString: " UTC"
 
   # Path to logo image from the /static folder.
-  logo: "/images/server_status.svg"
+  logo: "/images/clearstatus.svg"
 
   # Descriptions
   meta_description: "This status page provides updated information about our systems normal operation, incidents that may happen and their resolution."
