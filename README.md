@@ -22,11 +22,13 @@ By using ClearStatus, GitLab or GitHub and Netlify, you can create and customize
 
 ## Requirements
 
+Either:
+
 - a Gitlab.com or Github.com account
 - a Netlify account for easy and automated setup and operation
-\
-OR
-\
+
+or:
+
 - your own git repository and any other hosting for static files (you take care of hosting the status page)
  
 ## Getting started (automatic setup)
