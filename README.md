@@ -33,7 +33,7 @@ or:
  
 ## Getting started (automatic setup)
 
-The easiest way to enable your status page is to use the Deploy to Netlify buttons below. Depending on whether you have/prefer to host your git repository on GitHub or GitLab, select one of the buttons below.
+The easiest way to enable your status page is to use the **Deploy to Netlify** buttons below. Depending on whether you have/prefer to host your git repository on GitHub or GitLab, select one of the buttons below.
 
 > Note that you will need to have signed up for a Gitlab or Github account and a Netlify account prior to getting started.
 
