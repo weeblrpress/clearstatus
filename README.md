@@ -10,11 +10,13 @@ We've created ClearStatus to do just that for our own operations at [WeeblrPress
 
 ClearStatus is mostly a theme for the [Hugo CMS](https://gohugo.io). Hugo is a very fast static site generator. It does the bulk of the work, transforming a text file you write to describe an issue into a fully working status page.
 
+> When hosting your status pages at Netlify as suggested below, all the transformation process is automatic. You do not need to perform any additional setup or configuration and you'll never have to deal with Hugo yourself (not that Hugo is difficult, quite the opposite in fact!)
+
 Now any web page must be hosted on a server to be available. We suggest and use ourselves [Netlify](https://netlify.com) to host ClearStatus pages because setting up the whole thing can pretty much be done with a couple of clicks (just see below). In addition, it will be free including an SSL certificate for your site.
 
 The last part missing is a repository for your content, that is the issues description and updates. That content needs to be stored in a GIT repository. You can use your own git repositories if you are a developer but we suggest you sign up for free accounts at [GitLab.com](https://gitlab.com) or [GitHub.com](https://github.com). Those 2 will work perfectly with ClearStatus. 
 
-By using ClearStatus, GitLab or GitHub and Netlify, you will be able to create and customize your statuspage in no time. Adding issues and communicating with your audience about your bad times will be simple and done completely outside of your own server(s) - an absolute necessity for a status page: the most important time it should work is exactly when the rest of your servers are down!
+By using ClearStatus, GitLab or GitHub and Netlify, you can create and customize your statuspage in no time. Adding issues and communicating with your audience about your bad times will be simple and done completely outside of your own server(s) - an absolute necessity for a status page: the most important time it should work is exactly when the rest of your servers are down!
 
 > Did we mention ClearStatus is multilingal? if you so desire, your status page will have a language switcher and separate content per language. Messages for English, Spanish and French are built-in and you can easily add your own.
 
@@ -22,8 +24,10 @@ By using ClearStatus, GitLab or GitHub and Netlify, you will be able to create a
 
 - a Gitlab.com or Github.com account
 - a Netlify account for easy and automated setup and operation
+\
 OR
-- any other hosting for static files (you take care of hosting the status page)
+\
+- your own git repository and any other hosting for static files (you take care of hosting the status page)
  
 ## Getting started (automatic setup)
 
