@@ -71,15 +71,15 @@ As seen before, this default setup will cause your status page to be available a
 That's OK for testing but not best for real world operation so you probably want to setup a custom domain for your status page, such as `status.company.net`. This is a 2-steps process:
 
 1. At your Netlify control panel, set up a **custom domain**. See doc [on this page](https://www.netlify.com/docs/custom-domains/).
-2. At your DNS provider (the company where you registered your domain name most likely), you will need to tell them to point your chosen address (`status.company.net`) to Netlify servers. The process depends on your registrar but, please follow the Netlify documentation there as well.
+2. At your DNS provider (the company where you registered your domain name most likely), you will need to tell them to point your chosen address (`status.company.net`) to Netlify servers. The process depends on your registrar but please follow the Netlify documentation there as well.
 
-> It is advised to use a separate domain entirely for your status page. If your site is at https://example.com then it's best to purchase as well, for instance,  example.net or examplestatus.net and use that for your status page. The reason is simply that your DNS may also breaks and maybe someday anything at example.com will not be accessible. That's when you want to have example.net for your status page.
+> It is advised to use a separate domain entirely for your status page. If your site is at https://example.com then it's best to purchase as well, for instance,  example.net or examplestatus.net and use that for your status page. The reason is simply that your DNS may also break and maybe someday anything at example.com will not be accessible. That's when you want to have example.net for your status page.
 
 ### Enable Netlify CMS
 
 [NetlifyCMS](https://netlifycms.org) is a simple content management system that lets you update your ClearStatus configuration and content in a convenient interface, without having to deal with your git repository. This may be more convenient for users not familiar with git.
 
-ClearStatus comes with support for NetlifyCMS but you need to enable user authentication inside of your Netlify control panel:
+ClearStatus comes with support for NetlifyCMS. You need to enable user authentication inside of your Netlify control panel:
 
 1. On your team page, select the ClearStatus website you just created
 2. Select the `Settings` page and then `Identity` in the left side menu
@@ -97,11 +97,21 @@ The final step is to invite yourself so that you can modify the site:
 
 Invited users receive an email invitation with a confirmation link. Clicking the *Accept invite* link in that email will take them to your site with a login prompt.
 
+Once a user has accepted the invite, they can always access the Netlify CMS interface to add or modify content using the address:
+
+```
+https://yourstatuspage.com/admin
+```
+
+
 ## Customization 
 
-After initial setup, your ClearStatus status page has sample content and default settings, titles, etc You certainly want to change them. There are 2 ways to do that: visit either your Gitlab/Github account and update files in the **project name** you choose on Netlify.
+After initial setup, your ClearStatus status page has sample content and default settings, titles, etc You certainly want to change them. There are 2 ways to do that:
+ 
+- using your Gitlab/Github account and update files in the **project name** you choose on Netlify
+- use the Netlify CMS support built-in ClearStatus which we suggested to enable earlier
 
-Or use the Netlify CMS support built-in ClearStatus. The Netlify CMS lets you customize your configuration but also 
+> You can use both methods at the same time on the same status page. All data from Netlify CMS is written to your git repository so both will always be in sync. 
 
 ## Configuration
 
@@ -114,7 +124,7 @@ After configuring all settings and text to your liking, you should `Commit chang
 
 Wait 10-15 seconds and reload the status page: it should have all your changes now.
 
-> Most likely the most important setting is the component definition: for instance if you run a website and a helpdesk. They are independant and can go down or up independantly so they are listed separately. Use the `systems` option to set them up as needed.
+> Most likely the most important setting is the component definition: for instance if you run a website and a helpdesk, they are independant and can go down or up independantly so they are listed separately. Use the `systems` option to set them up as needed.
 
 ## Logo change
 
@@ -146,7 +156,7 @@ The issue file should be created with the following convention:
 
 ## Issue file content and template.
 
-The issue file should use the MARKDOWN language, which is basically just text and images with little in terms of formatting and is what Hugo normally uses.
+The issue file should use the [markdown](https://daringfireball.net/projects/markdown/syntax) language, which is basically just text and images with little in terms of formatting and is what Hugo normally uses.
 
 The first section of the file is however used to tell ClearStatus about the, well, status of the event happening and you should use it to convey your message to visitors.
 
@@ -182,7 +192,7 @@ max_severity: down
 current_severity: ok
 
 # Full date: 2019-03-29 17:26:09
-resolvedOn: 2019-03-30 20:45:19
+resolved_on: 2019-03-30 20:45:19
 
 # Affected components, must use exact names defined in site config
 affected:
@@ -228,8 +238,12 @@ Here is a breakdown of options available:
 `current_severity` is used when an event is `in_progress`. `max_severity` will be used when the event is resolved to indicate what the worst state of operation was. Typically, while an event is in progress, you will first set `current_severity` to `down`. Then as you make progress towards resolution then maybe you can change the state to `disturbed` or `monitoring` after you think the problem is solved but you are monitoring to be sure it does not come back. 
 Once the problem is fully solved, you can set its `status` option to `resolved`. That's when we'll use the `max_severity` as it is important to remember the system was down, even though the last severity level displayed may have been `disrupted` or `monitoring` only.
 
+- `resolved_on`: an optional date and time. Required when an event has been marked as `resolved` in its `status` field.
 
+- `affected`: a list of components that are affected by the event. Add one component per line and use exactly the same name you used on your configuration file.
 
+- `body`: the body of the event is just a plain text you can write to describe it. You can add to, remove from or update that text to your liking using markdown for nicer formatting. 
+ 
 ## Getting started (manual setup)
 
 Assuming you are familiar with git and/or Hugo, you may prefer to setup ClearStatus using a local git repo and then possibly host your status page elsewhere than Netlify.
@@ -238,11 +252,11 @@ ClearStatus comes in 2 flavors or rather 2 git repositories:
 
 - `clearstatustheme` is a **Hugo theme**. You can check it out and use it in any Hugo web site. It has an ExampleSite folders with a sample config.yml file you should use. 
 
-- `clearstatus` is a **Hugo site**. It's basically an empty site with the `clearstatustheme` setup as a git submodule, a config.yml file and some sample content. This is what is deployed to Netlify when using the automated setup. It's the preferred method deployment.
+- `clearstatus` is a **Hugo site**. It's basically an empty site with the `clearstatustheme` setup as a git submodule, a config.yml file and some sample content. This is what is deployed to Netlify when using the automated setup. **It's the preferred method deployment**.
 
-A suggested use is to clone the `clearstatustheme` repository in your own repo and just configure it for your own hosting as needed.
+Alternatively, you can clone only the `clearstatustheme` repository in your own repo and just configure it for your own hosting as needed.
 
-You can update the ClearStatus theme, whenever we a new version is available, by running the following from the root of the main repository:
+You can update the ClearStatus theme, whenever a new version is available, by running the following from the root of the main repository:
 
 ````  
 git submodule foreach git pull origin master
@@ -264,6 +278,6 @@ Both original repositories are available at:
 
 ## Credits
 
-This project is inspired by [CState](https://github.com/cstate/cstate) and started out both out of slightly different requirements and the desire to work with Hugo, Netlify, Go templates and such.
+This project is loosely inspired by [CState](https://github.com/cstate/cstate) and started out both out of different requirements and the desire to work with Hugo, Netlify, Go templates and such.
 
 
