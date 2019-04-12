@@ -46,7 +46,7 @@ When you click one of those buttons, you will be taken to the Netlify website an
 
 Just click that link and view your status page: it has some sample issues. You can start customizing it now (see below)
 
-> From this point all customization or content update will be done using your GitLab or GitHub account.
+> From this point all customization or content update can be done using your GitLab or GitHub account. You can also setup Netlify CMS to customize your status page with a simple online interface. Setting up Netlify CMS is simple and is described below.
 
 ### Create a Clearstatus status page on Netlify using GITHUB
 
