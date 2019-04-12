@@ -114,6 +114,7 @@ params:
   affectedColor: "text-grey-darkest"
 
   # NetlifyCMS support
+  enableNetlifyCMSSupport: true
   netlifySlug: "{{year}}-{{month}}-{{day}}-{{slug}}"
 
 ############################################################

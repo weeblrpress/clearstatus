@@ -88,6 +88,14 @@ ClearStatus comes with support for NetlifyCMS but you need to enable user authen
 5. Scroll down to `External providers` and select `Github` or `Gitlab` depending on which git repo you are using.
 6. Scroll down to `Services`, then `Git gateway` and click the `Enable git gateway` button 
 
+The final step is to invite yourself so that you can modify the site:
+
+1. On your team page, select the ClearStatus website you just created
+2. Select the `Identity` tab
+3. Click on the `Invite users` button
+4. Enter your email address in the popup dialog, and possibly that of more users
+
+Invited users receive an email invitation with a confirmation link. Clicking the *Accept invite* link in that email will take them to your site with a login prompt.
 
 ## Customization 
 
