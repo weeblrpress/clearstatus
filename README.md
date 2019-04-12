@@ -60,9 +60,40 @@ Deploy to Netlify with one click from GitLab:
 
 [![Deploy to Netlify from Gitlab.com](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://gitlab.com/weeblrpress/clearstatus)
 
+## Netlify configuration
+
+There are 2 additional steps you probably want to take when using Netlify:
+
+### Using a custom domain
+
+As seen before, this default setup will cause your status page to be available at a weird Netlify URL such as  https://tender-goodall-bd0396.netlify.com/
+
+That's OK for testing but not best for real world operation so you probably want to setup a custom domain for your status page, such as `status.company.net`. This is a 2-steps process:
+
+1. At your Netlify control panel, set up a **custom domain**. See doc [on this page](https://www.netlify.com/docs/custom-domains/).
+2. At your DNS provider (the company where you registered your domain name most likely), you will need to tell them to point your chosen address (`status.company.net`) to Netlify servers. The process depends on your registrar but, please follow the Netlify documentation there as well.
+
+> It is advised to use a separate domain entirely for your status page. If your site is at https://example.com then it's best to purchase as well, for instance,  example.net or examplestatus.net and use that for your status page. The reason is simply that your DNS may also breaks and maybe someday anything at example.com will not be accessible. That's when you want to have example.net for your status page.
+
+### Enable Netlify CMS
+
+[NetlifyCMS](https://netlifycms.org) is a simple content management system that lets you update your ClearStatus configuration and content in a convenient interface, without having to deal with your git repository. This may be more convenient for users not familiar with git.
+
+ClearStatus comes with support for NetlifyCMS but you need to enable user authentication inside of your Netlify control panel:
+
+1. On your team page, select the ClearStatus website you just created
+2. Select the `Settings` page and then `Identity` in the left side menu
+3. Click on `Enable identity`
+4. Scroll down to `Registration` and select `Invite only` so that only selected users can modify your page
+5. Scroll down to `External providers` and select `Github` or `Gitlab` depending on which git repo you are using.
+6. Scroll down to `Services`, then `Git gateway` and click the `Enable git gateway` button 
+
+
 ## Customization 
 
-After initial setup, your ClearStatus status page has sample content and default settings, titles, etc You certainly want to change them which you will do by visiting either your Gitlab/Github account and selecting the **project name** you choose on Netlify.
+After initial setup, your ClearStatus status page has sample content and default settings, titles, etc You certainly want to change them. There are 2 ways to do that: visit either your Gitlab/Github account and update files in the **project name** you choose on Netlify.
+
+Or use the Netlify CMS support built-in ClearStatus. The Netlify CMS lets you customize your configuration but also 
 
 ## Configuration
 
@@ -87,18 +118,6 @@ logo: "/images/our-logo.png"
 
 > Note that the "logo" setting should not include the initial /static part.
 
-
-## Using a custom domain
-
-As seen before, this default setup will cause your status page to be available at a weird Netlify URL such as  https://tender-goodall-bd0396.netlify.com/
-
-That's OK for testing but not best for real world operation so you probably want to setup a custom domain for your status page, such as `status.company.net`. This is a 2-steps process:
-
-1. At your Netlify control panel, set up a **custom domain**. See doc [on this page](https://www.netlify.com/docs/custom-domains/).
-2. At your DNS provider (the company where you registered your domain name most likely), you will need to tell them to point your chosen address (`status.company.net`) to Netlify servers. The process depends on your registrar but, please follow the Netlify documentation there as well.
-
-> It is advised to use a separate domain entirely for your status page. If your site is at https://example.com then it's best to purchase as well, for instance,  example.net or examplestatus.net and use that for your status page. The reason is simply that your DNS may also breaks and maybe someday anything at example.com will not be accessible. That's when you want to have example.net for your status page.
- 
 ## Entering and updating content
 
 Whenever a problem occurs on one of your systems, you will create *an issue*. An issue is actually a single file that you create in the `/content/en/issues` folder which exists in your ClearStatus installation on Gitlab/GitHub. This is assuming your site language is **en** which you may have changed in the configuration file. Adjust instructions accordingly.
