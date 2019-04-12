@@ -54,7 +54,7 @@ params:
   copyrightHolder: "Example Inc."
 
   # Layout
-  incidentPostsPerPage: 10
+  eventsPerPage: 10
 
 ############################################################
 ## More default config. in /config/_default/params.yml
