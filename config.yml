@@ -10,7 +10,7 @@ buildFuture: true
 
 # Language config
 languageCode: en
-defaultContentLanguage: en
+
 # the folder where your issues will be stored.
 contentDir: "content/default"
 
