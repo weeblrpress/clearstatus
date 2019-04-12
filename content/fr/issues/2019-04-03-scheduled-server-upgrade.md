@@ -21,7 +21,7 @@ max_severity: down
 current_severity: down
 
 # Full date: 2019-03-29 17:26:09
-resolvedOn:
+resolved_on:
 
 # Affected components, must use exact names defined in site config
 affected:

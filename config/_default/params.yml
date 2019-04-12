@@ -1,0 +1,63 @@
+############################################################
+## Status default config. Valid for ALL languages.
+############################################################
+
+## Source for CSS
+enablePostCSSProcessing: false
+fullCSSSourceFile: "css/src/styles.css"
+fullCSSDistFile: "css/dist/styles.css"
+postCSSConfigFolder: "themes/clearstatustheme"
+
+# Colors
+bodyBackground: "bg-grey-lighter"
+bodyColor: "text-grey-dark"
+visibleBordersColor: "border-grey-dark"
+bordersColor: "border-transparent"
+headerBackground: "bg-white"
+headerColor: "text-grey-darkest"
+footerBackground: "bg-white"
+footerColor: "text-grey-darkest"
+componentsBackground: "bg-white"
+componentsColor: "text-black"
+componentsBorders: "border-grey-lighter"
+refreshColor: "text-grey-dark"
+paginationLinksColor: "text-grey-darkest"
+disabledPaginationLinksColor: "text-grey-dark"
+
+# Severity
+defaultSeverityBackground: "bg-grey-light"
+defaultSeverityColor: "text-black"
+downSeverityBackground: "bg-red-dark"
+downSeverityColor: "text-white"
+disruptedSeverityBackground: "bg-orange-dark"
+disruptedSeverityColor: "text-white"
+monitoringSeverityBackground: "bg-orange"
+monitoringSeverityColor: "text-white"
+maintenanceSeverityBackground: "bg-grey-light"
+maintenanceSeverityColor: "text-black"
+okSeverityBackground: "bg-green-dark"
+okSeverityColor: "text-white"
+
+# Incident types
+scheduledHeaderBackground: "bg-blue-lighter"
+scheduledHeaderColor: "text-grey-dark"
+scheduledHeaderTitleColor: "text-black"
+scheduledBodyBackground: "bg-white"
+scheduledBodyColor: "text-grey-darkest"
+scheduledBodyTitleColor: "text-black"
+
+smallBodyBackground: "bg-white"
+smallBodyColor: "text-grey-darkest"
+smallBodyTitleColor: "text-black"
+
+pastBodyBackground: "bg-white"
+pastBodyColor: "text-grey-darkest"
+pastBodyTitleColor: "text-black"
+
+# Affected components
+affectedBackground: "bg-grey-lighter"
+affectedColor: "text-grey-darkest"
+
+# NetlifyCMS support
+enableNetlifyCMSSupport: true
+netlifySlug: "{{year}}-{{month}}-{{day}}-{{slug}}"

@@ -1,0 +1,45 @@
+############################################################
+## Hugo ClearStatus config
+############################################################
+
+# Required for scheduled items
+buildFuture: true
+
+defaultContentLanguageInSubdir: false
+
+# the folder where your issues will be stored.
+contentDir: "content/default"
+
+# Theme to use
+theme: clearstatustheme
+assetsDir: themes/clearstatustheme/assets
+
+############################################################
+## Do not change!!
+############################################################
+
+disableKinds:
+  - section
+  - taxonomy
+  - taxonomyTerm
+  - sitemap
+
+blackfriday:
+  extensions:
+    - hardLineBreak
+  extensionsmask:
+    - joinLines
+
+# NetlifyCMS support
+mediaTypes:
+  application/netlifyconfig:
+    suffixes:
+      - "yml"
+
+outputFormats:
+  netlifyyaml:
+    baseName: "config"
+    isPlainText: true
+    isHTML: false
+    mediaType: "application/netlifyconfig"
+    notAlternative: true

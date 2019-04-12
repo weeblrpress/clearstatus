@@ -5,9 +5,6 @@
 # Complete page title
 title: ClearStatus systems status page
 
-# Required for scheduled items
-buildFuture: true
-
 # Language config
 languageCode: en
 
@@ -17,9 +14,11 @@ contentDir: "content/default"
 # Your deployed site URL. Not needed in many cases.
 # baseUrl: "http://localhost:1313/"
 
-# Theme to use
-theme: clearstatustheme
-assetsDir: themes/clearstatustheme/assets
+
+############################################################
+## More default config. in /config/_default/config.yml
+############################################################
+
 
 ############################################################
 ## Status default config. Valid for ALL languages.
@@ -57,136 +56,6 @@ params:
   # Layout
   incidentPostsPerPage: 10
 
-  ## Source for CSS
-  enablePostCSSProcessing: false
-  fullCSSSourceFile: "css/src/styles.css"
-  fullCSSDistFile: "css/dist/styles.css"
-  postCSSConfigFolder: "themes/clearstatustheme"
-
-  # Colors
-  bodyBackground: "bg-grey-lighter"
-  bodyColor: "text-grey-dark"
-  visibleBordersColor: "border-grey-dark"
-  bordersColor: "border-transparent"
-  headerBackground: "bg-white"
-  headerColor: "text-grey-darkest"
-  footerBackground: "bg-white"
-  footerColor: "text-grey-darkest"
-  componentsBackground: "bg-white"
-  componentsColor: "text-black"
-  componentsBorders: "border-grey-lighter"
-  refreshColor: "text-grey-dark"
-  paginationLinksColor: "text-grey-darkest"
-  disabledPaginationLinksColor: "text-grey-dark"
-
-  # Severity
-  defaultSeverityBackground: "bg-grey-light"
-  defaultSeverityColor: "text-black"
-  downSeverityBackground: "bg-red-dark"
-  downSeverityColor: "text-white"
-  disruptedSeverityBackground: "bg-orange-dark"
-  disruptedSeverityColor: "text-white"
-  monitoringSeverityBackground: "bg-orange"
-  monitoringSeverityColor: "text-white"
-  maintenanceSeverityBackground: "bg-grey-light"
-  maintenanceSeverityColor: "text-black"
-  okSeverityBackground: "bg-green-dark"
-  okSeverityColor: "text-white"
-
-  # Incident types
-  scheduledHeaderBackground: "bg-blue-lighter"
-  scheduledHeaderColor: "text-grey-dark"
-  scheduledHeaderTitleColor: "text-black"
-  scheduledBodyBackground: "bg-white"
-  scheduledBodyColor: "text-grey-darkest"
-  scheduledBodyTitleColor: "text-black"
-
-  smallBodyBackground: "bg-white"
-  smallBodyColor: "text-grey-darkest"
-  smallBodyTitleColor: "text-black"
-
-  pastBodyBackground: "bg-white"
-  pastBodyColor: "text-grey-darkest"
-  pastBodyTitleColor: "text-black"
-
-  # Affected components
-  affectedBackground: "bg-grey-lighter"
-  affectedColor: "text-grey-darkest"
-
-  # NetlifyCMS support
-  enableNetlifyCMSSupport: true
-  netlifySlug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-
 ############################################################
-## Language config. Override params per language as needed.
+## More default config. in /config/_default/params.yml
 ############################################################
-# To enable multilingual support:
-# - Remove the leading # of the section below
-# - Adjust the language list as needed
-# - create per-language folders in the content section
-# - place your issues in per-language folder
-# - eg: spanish version of issues go into /content/es/issues
-# - be sure to properly set the contentDir to /content/xx
-#  where xx matches the language code
-#
-# A language switcher will be displayed near top of page
-# when several languages are defined.
-#
-############################################################
-
-#defaultContentLanguageInSubdir: false
-#
-#languages:
-#  en:
-#    weight: 1
-#    languageName: English
-#  fr:
-#    title: Etat de nos systèmes
-#    weight: 2
-#    contentDir: content/fr
-#    languageCode: fr
-#    languageName: Français
-#    params:
-#      systems:
-#        - name: Website
-#          description: Le site web de notre société
-#          link: https://www.example.fr/
-#        - name: Support
-#          description: Notre site de support
-#          link: https://support.example.fr/
-#
-#  es:
-#    title: Nuestra página de estado
-#    weight: 3
-#    contentDir: content/es
-#    languageCode: es
-#    languageName: Español
-
-
-############################################################
-## Do not change!!
-############################################################
-
-disableKinds:
-  - section
-  - taxonomy
-  - taxonomyTerm
-  - sitemap
-
-blackfriday:
-  extensions:
-    - hardLineBreak
-
-# NetlifyCMS support
-mediaTypes:
-  application/netlifyconfig:
-    suffixes:
-      - "yml"
-
-outputFormats:
-  netlifyyaml:
-    baseName: "config"
-    isPlainText: true
-    isHTML: false
-    mediaType: "application/netlifyconfig"
-    notAlternative: true

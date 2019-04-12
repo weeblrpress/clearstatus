@@ -1,0 +1,41 @@
+############################################################
+## Language config. Override params per language as needed.
+############################################################
+# To enable multilingual support:
+# - Remove the leading # of the section below
+# - Adjust the language list as needed
+# - create per-language folders in the content section
+# - place your issues in per-language folder
+# - eg: spanish version of issues go into /content/es/issues
+# - be sure to properly set the contentDir to /content/xx
+#  where xx matches the language code
+#
+# A language switcher will be displayed near top of page
+# when several languages are defined.
+#
+############################################################
+
+en:
+  weight: 1
+  languageName: English
+fr:
+  title: Etat de nos systèmes
+  weight: 2
+  contentDir: content/fr
+  languageCode: fr
+  languageName: Français
+  params:
+    systems:
+      - name: Website
+        description: Le site web de notre société
+        link: https://www.example.fr/
+      - name: Support
+        description: Notre site de support
+        link: https://support.example.fr/
+
+es:
+  title: Nuestra página de estado
+  weight: 3
+  contentDir: content/es
+  languageCode: es
+  languageName: Español
