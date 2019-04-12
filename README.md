@@ -73,7 +73,7 @@ That's OK for testing but not best for real world operation so you probably want
 1. At your Netlify control panel, set up a **custom domain**. See doc [on this page](https://www.netlify.com/docs/custom-domains/).
 2. At your DNS provider (the company where you registered your domain name most likely), you will need to tell them to point your chosen address (`status.company.net`) to Netlify servers. The process depends on your registrar but please follow the Netlify documentation there as well.
 
-> It is advised to use a separate domain entirely for your status page. If your site is at https://example.com then it's best to purchase as well, for instance,  example.net or examplestatus.net and use that for your status page. The reason is simply that your DNS may also break and maybe someday anything at example.com will not be accessible. That's when you want to have example.net for your status page.
+> It is advised to use a separate domain entirely for your status page. If your site is at https://example.com then it's best to purchase as well, for instance,  example.net or examplestatus.com and use that for your status page. The reason is simply that your DNS may also break and maybe someday anything at example.com will not be accessible. That's when you want to have example.net for your status page. Ideally, you would purchase that second domain name at a separate provider just in case it is your DNS provider which is down.
 
 ### Enable Netlify CMS
 
