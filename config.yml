@@ -11,10 +11,8 @@ buildFuture: true
 # Language config
 languageCode: en
 defaultContentLanguage: en
-# we suggest you use language based directory for your content
-# even if you only use one language. You may update to multlingual
-# at some point in the future.
-contentDir: "content/en"
+# the folder where your issues will be stored.
+contentDir: "content/default"
 
 # Your deployed site URL. Not needed in many cases.
 # baseUrl: "http://localhost:1313/"
@@ -111,9 +109,12 @@ params:
   pastBodyColor: "text-grey-darkest"
   pastBodyTitleColor: "text-black"
 
-  ## Affected components
+  # Affected components
   affectedBackground: "bg-grey-lighter"
   affectedColor: "text-grey-darkest"
+
+  # NetlifyCMS support
+  netlifySlug: "{{year}}-{{month}}-{{day}}-{{slug}}"
 
 ############################################################
 ## Language config. Override params per language as needed.
@@ -137,7 +138,6 @@ params:
 #languages:
 #  en:
 #    weight: 1
-#    contentDir: content/en
 #    languageName: English
 #  fr:
 #    title: Etat de nos systèmes
@@ -175,3 +175,17 @@ disableKinds:
 blackfriday:
   extensions:
     - hardLineBreak
+
+# NetlifyCMS support
+mediaTypes:
+  application/netlifyconfig:
+    suffixes:
+      - "yml"
+
+outputFormats:
+  netlifyyaml:
+    baseName: "config"
+    isPlainText: true
+    isHTML: false
+    mediaType: "application/netlifyconfig"
+    notAlternative: true

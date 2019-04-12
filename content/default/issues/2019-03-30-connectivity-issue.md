@@ -1,16 +1,16 @@
 ---
-title: Main site server upgrade
+title: Connectivity failure
 
 draft: false
 
 # Full date: 2019-03-29 17:26:09
-date: 2019-04-12
+date: 2019-03-30 20:03:00
 
 # Status: "resolved" | "in_progress" | "scheduled"
-status: "scheduled"
+status: "resolved"
 
 # Duration: Raw text, ie 5mn, 1h, 1 hour,..
-duration: 5mn
+duration:
 
 # Max severity: will be displayed when issue is resolved, in the past events section
 # Max_severity: ok | disrupted | down | monitoring | maintenance
@@ -18,14 +18,15 @@ max_severity: down
 
 # Current severity: used for current issue display
 # current_severity: ok | disrupted | down | monitoring | maintenance
-current_severity: down
+current_severity: ok
 
 # Full date: 2019-03-29 17:26:09
-resolvedOn:
+resolved_on: 2019-03-30 20:45:19
 
 # Affected components, must use exact names defined in site config
 affected:
   - Site
+  - Helpdesk
 
 section: issue
 
@@ -38,9 +39,17 @@ section: issue
 ## Enter below issue description and subsequent updates if any
 ---
 
-Our hosting company needs to perform some software updates on our main website server. These updates require restarting the machine which implies some downtime.
+Both our website and customer support area cannot be reached at the moment. We are investigating the matter.
 \
-This maintenance should not last more than a few minutes or cause any other perturbation.
+**Issue identified:** Our hosting company has informed us of a failure in the datacenter network equipment. They are working on it and expect a quick resolution.  {{< track "2019-03-30 20:08:19" >}}
 \
-Sorry about the trouble!
+**Monitoring:** The equipment in question has been replaced and website and support site can be reached. We are monitoring the servers for the next few minutes to be sure all is OK. {{< track "2019-03-30 20:31:19" >}}
 \
+**Resolved:** Both servers are operating normally, issue is solved. Really sorry about the trouble!
+\
+
+
+
+
+
+
