@@ -2,6 +2,9 @@
 ## Hugo ClearStatus config
 ############################################################
 
+# Your deployed site URL. Not needed in many cases.
+# baseUrl: "http://localhost:1313/"
+
 # Required for scheduled items
 buildFuture: true
 
