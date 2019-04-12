@@ -15,27 +15,28 @@
 #
 ############################################################
 
-en:
-  weight: 1
-  languageName: English
-fr:
-  title: Etat de nos systèmes
-  weight: 2
-  contentDir: content/fr
-  languageCode: fr
-  languageName: Français
-  params:
-    systems:
-      - name: Website
-        description: Le site web de notre société
-        link: https://www.example.fr/
-      - name: Support
-        description: Notre site de support
-        link: https://support.example.fr/
-
-es:
-  title: Nuestra página de estado
-  weight: 3
-  contentDir: content/es
-  languageCode: es
-  languageName: Español
+#
+#en:
+#  weight: 1
+#  languageName: English
+#fr:
+#  title: Etat de nos systèmes
+#  weight: 2
+#  contentDir: content/fr
+#  languageCode: fr
+#  languageName: Français
+#  params:
+#    systems:
+#      - name: Website
+#        description: Le site web de notre société
+#        link: https://www.example.fr/
+#      - name: Support
+#        description: Notre site de support
+#        link: https://support.example.fr/
+#
+#es:
+#  title: Nuestra página de estado
+#  weight: 3
+#  contentDir: content/es
+#  languageCode: es
+#  languageName: Español
