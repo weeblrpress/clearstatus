@@ -8,6 +8,7 @@
 # Required for scheduled items
 buildFuture: true
 
+defaultContentLanguage: "en"
 defaultContentLanguageInSubdir: false
 
 # the folder where your issues will be stored.
