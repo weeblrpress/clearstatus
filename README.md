@@ -256,6 +256,12 @@ ClearStatus comes in 2 flavors or rather 2 git repositories:
 
 Alternatively, you can clone only the `clearstatustheme` repository in your own repo and just configure it for your own hosting as needed.
 
+Make sure to clone the `clearstatustheme` with **submodules** or else you will only get the main site without the status theme. For instance:
+
+````
+git clone --recurse-submodules https://github.com/weeblrpress/clearstatus.git mystatuspage
+````
+
 You can update the ClearStatus theme, whenever a new version is available, by running the following from the root of the main repository:
 
 ````  
