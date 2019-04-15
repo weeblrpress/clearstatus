@@ -1,5 +1,5 @@
 [build]
-    command = "git submodule foreach git pull origin master && hugo"
+    command = "git submodule foreach git pull origin master && hugo --minify"
     publish = "public"
 
 [context.production.environment]
