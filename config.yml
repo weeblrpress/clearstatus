@@ -8,13 +8,6 @@ title: ClearStatus systems status page
 # Language config
 languageCode: en
 
-# the folder where your issues will be stored.
-contentDir: "content/default"
-
-# Your deployed site URL. Not needed in many cases.
-# baseUrl: "http://localhost:1313/"
-
-
 ############################################################
 ## More default config. in /config/_default/config.yml
 ############################################################
@@ -45,6 +38,10 @@ params:
 
   # Path to logo image from the /static folder.
   logo: "/images/clearstatus.svg"
+
+  # favicon
+  icon: "/images/clearstatus.png"
+  iconType: "image/png"
 
   # Descriptions
   meta_description: "This status page provides updated information about our systems normal operation, incidents that may happen and their resolution."
