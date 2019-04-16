@@ -46,7 +46,7 @@ params:
   # Descriptions
   meta_description: "This status page provides updated information about our systems normal operation, incidents that may happen and their resolution."
   description_footer: "<a class='text-grey-darkest' title='Visit example.com' href='https://www.example.com/'>Example.com</a> provides open-source software for all kind of sectors."
-  description_header: "Information about <a class='text-grey-darkest' title='Visit example.com' href='https://www.example.com/'>example</a> systems operations.<br />Follow us <a class='text-grey-darkest' title='Visit our page on Twitter' href='https://www.twitter.com/example'>on Twitter</a> or subscribe to <a href='%s'>RSS</a><br />to be alerted of new events."
+  description_header: "Information about <a class='text-grey-darkest' title='Visit example.com' href='https://www.example.com/'>example</a> systems operations.<br />Follow us <a class='text-grey-darkest' title='Visit our page on Twitter' href='https://www.twitter.com/example'>on Twitter</a> or subscribe to <a class='text-grey-darkest' href='%s'>RSS</a><br />to be alerted of new events."
 
   copyrightHolder: "Example Inc."
 
