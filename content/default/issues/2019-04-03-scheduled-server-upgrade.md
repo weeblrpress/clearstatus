@@ -27,6 +27,29 @@ resolved_on:
 affected:
   - Site
 
+# If set and the status is in_progress, this feed will be embedded
+# in the event display. Leave empty for no Twitter feed.
+# Possible URL formats:
+# See:  https://help.twitter.com/en/using-twitter/embed-twitter-feed
+#
+# - Profile: Display public Tweets from any user on Twitter:
+#    https://twitter.com/weeblrpress
+#  
+# - Likes: Show all Tweets a specific user has marked as likes.
+#    https://twitter.com/TwitterDev/likes
+#
+# - List: Show Tweets from public Lists that you own and/or subscribe to.
+#    https://twitter.com/TwitterDev/lists/national-parks
+# 
+# - Collection: Show Tweets from a curated collection.
+#    https://twitter.com/TwitterDev/timelines/539487832448843776
+#
+# - Moment: Show Tweets from a public moment.
+#    https://twitter.com/i/moments/625792726546558977
+#
+twitterFeed:
+
+## Do not change
 section: issue
 
 # Short code available in content to display current date
