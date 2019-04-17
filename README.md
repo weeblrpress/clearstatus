@@ -162,6 +162,8 @@ The issue file should be created with the following convention:
 - then a title with no spaces
 - with a `.md` extension
 
+> The start page of a ClearStatus status page displays all present and past events. However each event also has an individual URL that you can share. Click on an issue header to reach that page.
+
 ## Issue file content and template.
 
 Issue files use the [markdown](https://daringfireball.net/projects/markdown/syntax) language, which is basically just text and images with little in terms of formatting and is what [Hugo](https://gohugo.io) normally uses.
@@ -172,7 +174,7 @@ Once you have written the current event description, use the `Commit changes` bu
 
 When the issue status changes, for instance when it's resolved or some more information is available, come back to this page, modify the event file and use `Commit changes` again to update your status page.
 
-Here is a sample issue file, you should use it as a template:
+Here is a sample issue file, you can use it as a template:
 
 
 ````
@@ -313,6 +315,135 @@ Both original repositories are available at:
 - [https://github.com/weeblrpress/clearstatus](https://gitlab.com/weeblrpress/clearstatus)
 
 > Please us the [Github Clearstatus repository](https://github.com/weeblrpress/clearstatustheme/issues) for any issue you may have, suggested changes or pull requests
+
+## Changing text - Translation
+
+Longer descriptions in header and footers can be changed from the `config.yml` file in the root folder of your ClearStatus site. Other strings and messages are available for translation or just to better suit your liking or use case.
+
+Those strings are stored in the `themes/clearstatustheme/i18n` folder. There is one file per language called for instance `en.yml`, `fr.yml`,...
+
+> You can select the site language in the `/config.yml` file under the `languageCode` key. It defaults to `en`.
+
+Here is a sample content from the `en.yml` file:
+
+````
+# Summary status message
+- id: scheduled
+  translation: Scheduled
+
+- id: isDown
+  translation: Something's happening here...
+- id: isDisrupted
+  translation: Having a little bit of trouble...
+- id: isMonitoring
+  translation: Some systems being monitored...
+- id: isMaintenance
+  translation: Some systems under maintenance...
+- id: isOk
+  translation: All systems operational.
+````
+
+Should you want to add your own translation or just override one of those messages, you should not modify directly those files as this would make updating ClearStatus more dificult.
+
+Instead, you can add an override in your site that will take over the original ClearStatus text. Proceed as follow to change text for the English language:
+
+- Create a folder `i18n` at the root of your site
+- Create a file called `en.yml` in that folder
+- Insert the following to that file:
+
+````
+- id: isDown
+  translation: Houston, we have a problem...
+````
+- Save the file and commit the changes.
+
+Now the original _Something's happening here..._ will be replaced with _Houston, we have a problem..._ whenever one component in your systems is down.
+
+Note that you do not have to copy across **all** text in the original file. Just copy and modify the content you need to modify.
+
+Should you want to add translation for a language, copy the entire `en.yml` file to `xx.yml` where xx is the desired language code and start translating.
+
+## Enabling multilingual support
+
+ClearStatus can manage events in several languages so that you can communicate with your users in their language. Each language has **independent** content. Per language content is stored in per-language folders and if you do not provide a language-specific version of an event, it will not be displayed for that language.
+
+> At this moment, multilingual support cannot be managed throuhg the **Netlify CMS** interface. You will need to use Gitlab/Github or your own git workflow to manage content.
+
+### Enabling multilingual support.
+
+Open the `/config/_default/languages.yml` file to enable and configure multilingual content. Here is the default language configuration: 
+
+````
+#
+#en:
+#  weight: 1
+#  languageName: English
+#fr:
+#  title: Etat de nos systèmes
+#  weight: 2
+#  contentDir: content/fr
+#  languageCode: fr
+#  languageName: Français
+#  params:
+#    systems:
+#      - name: Website
+#        description: Le site web de notre société
+#        link: https://www.example.fr/
+#      - name: Support
+#        description: Notre site de support
+#        link: https://support.example.fr/
+#
+#es:
+#  title: Nuestra página de estado
+#  weight: 3
+#  contentDir: content/es
+#  languageCode: es
+#  languageName: Español
+````
+
+As you can see, all lines in that file start with a `#`: they are commented out and have no effect. To add more languages to your site, you will need to remove the `#` symbol at the start of the desired lines and configure as needed. Here is an example for adding both Spanish and French to a site with Enlglish as the default language:
+
+````
+en:
+  weight: 1
+  languageName: English
+fr:
+  title: Etat de nos systèmes
+  weight: 2
+  contentDir: content/fr
+  languageCode: fr
+  languageName: Français
+  params:
+    systems:
+      - name: Website
+        description: Le site web de notre société
+        link: https://www.example.fr/
+      - name: Support
+        description: Notre site de support
+        link: https://support.example.fr/
+
+es:
+  title: Nuestra página de estado
+  weight: 3
+  contentDir: content/es
+  languageCode: es
+  languageName: Español
+````
+
+A few key points:
+
+- each language is defined under its language code (use what you want there, it really is up to you)
+- for each language, you can redefine configuration items already defined for the default language.
+For instance, adding the `title: Etat de nos systèmes` line replaces the original `title` text for French. You can also redefine the name and list of components in your systems per language
+- the `weight` parameter will determine the order of languages in the language switcher and default language.
+
+After saving and committing this configuration file, you will get the following:
+
+<p align="center"><img src="https://cdn.weeblrpress.net/clearstatus/features/multilingual-default-language-small.png" alt="Sample Clearstatus multilingual status page"></p> 
+
+There is a language switcher added at the top. Clicking on the `Français` link goes to the following page:
+
+<p align="center"><img src="https://cdn.weeblrpress.net/clearstatus/features/multilingual-other-language-small.png" alt="Sample French Clearstatus multilingual status page"></p>
 
 ## Credits
 
