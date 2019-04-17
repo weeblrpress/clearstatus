@@ -20,6 +20,9 @@ The last part missing is a repository for your content, that is the issues descr
 
 By using ClearStatus, GitLab or GitHub and Netlify, you can create and customize your statuspage in no time. Adding issues and communicating with your audience about your bad times will be simple and done completely outside of your own server(s) - an absolute necessity for a status page: the most important time it should work is exactly when the rest of your servers are down!
 
+You can and should use other media to communicate such as Twitter. But tweets come and go and quickly disappear in the Twitter feeds - when they are not simply hidden by Twitter algorithms. Your status page provides a fixed location where your users can go and be updated.
+As a matter of fact, you can easily embed relevant tweets to a specific issue so you get best of both worlds as you can see in the screenshot above.
+
 > Did we mention ClearStatus is multilingal? if you so desire, your status page will have a language switcher and separate content per language. Messages for English, Spanish and French are built-in and you can easily add your own.
 
 ## Requirements
