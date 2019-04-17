@@ -193,6 +193,12 @@ date: 2019-03-30 20:03:00
 # Status: "resolved" | "in_progress" | "scheduled"
 status: "resolved"
 
+# This message will be taken out of the flow of events
+# and displayed at top of page or below the header
+# as long as its status is marked as in_progress
+# pinned: (empty) | top | belowheader
+pinned: 
+
 # Duration for "scheduled" issues: Raw text, ie 5mn, 1h, 1 hour,..
 duration:
 
@@ -267,6 +273,12 @@ Here is a breakdown of options available:
 `resolved` events are listed at the bottom of the page, with a neutral colored header
 
 `scheduled` events are listed just below the list of components (systems) on your page with a lighlty colored header.
+
+- `pinned`: if you set this to `top` or `belowheader` and set its status to `in_progress`, the event will be taken out of the regular display and will show at the very top of each page or just below the header, respectively. This is meant to display an important message in a prominent manner to all visitors such as a security warning. Once the status is reset to anything else but `in_progress`, the event will not be displayed anywhere anymore.
+
+Pinned items also have a simplified layout:
+
+<p align="center"><img src="https://cdn.weeblrpress.net/clearstatus/features/pinned-item.png" alt="Pinned message example"></p>
 
 - `duration` is only used for **scheduled** event. Use that field to tell visitors how long that scheduled event is supposed to last. It's free text, can be "about 5 mn", "1 hour" or "1h"
 
