@@ -121,7 +121,7 @@ After initial setup, your ClearStatus status page has sample content and default
 
 Most options should be configured through the single `config.yml` file located at the root of your project root repository. You can edit that file directly from GitLab/GitHub and change it as you whish.
 
-Most likely the most important setting is the component definition: for instance if you run a website and a helpdesk, they are independant and can go down or up independantly so they are listed separately. Use the `systems` option to set them up as needed.
+Most likely the most important setting is the component definition: for instance if you run a website and a helpdesk, they are independent and can go down or up independently so they are listed separately. Use the `systems` option to set them up as needed.
 
 > You can change those options as well using the **Netlify CMS** interface under the `Settings` tab.
 
@@ -193,7 +193,7 @@ date: 2019-03-30 20:03:00
 # Status: "resolved" | "in_progress" | "scheduled"
 status: "resolved"
 
-# Duration: Raw text, ie 5mn, 1h, 1 hour,..
+# Duration for "scheduled" issues: Raw text, ie 5mn, 1h, 1 hour,..
 duration:
 
 # Max severity: will be displayed when issue is resolved, in the past events section

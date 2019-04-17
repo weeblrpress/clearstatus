@@ -9,7 +9,7 @@ date: 2019-03-30 20:03:00
 # Status: "resolved" | "in_progress" | "scheduled"
 status: "resolved"
 
-# Duration: Raw text, ie 5mn, 1h, 1 hour,..
+# Duration for "scheduled" issues: Raw text, ie 5mn, 1h, 1 hour,..
 duration:
 
 # Max severity: will be displayed when issue is resolved, in the past events section
