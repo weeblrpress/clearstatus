@@ -9,6 +9,12 @@ date: 2019-04-12
 # Status: "resolved" | "in_progress" | "scheduled"
 status: "scheduled"
 
+# This message will be taken out of the flow of events
+# and displayed at top of page or below the header
+# as long as its status is marked as in_progress
+# pinned: (empty) | top | belowheader
+pinned: 
+
 # Duration for "scheduled" issues: Raw text, ie 5mn, 1h, 1 hour,..
 duration: 5mn
 
