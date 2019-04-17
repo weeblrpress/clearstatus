@@ -263,14 +263,19 @@ Here is a breakdown of options available:
 - `status`: 3 options: `resolved`, `in_progress` or `scheduled`. 
 
 `in_progress` events are listed at the top of your status page, with a red header
+
 `resolved` events are listed at the bottom of the page, with a neutral colored header
+
 `scheduled` events are listed just below the list of components (systems) on your page with a lighlty colored header.
 
 - `duration` is only used for **scheduled** event. Use that field to tell visitors how long that scheduled event is supposed to last. It's free text, can be "about 5 mn", "1 hour" or "1h"
 
 - `max_severity` and `current_severity` are used to display an event importance and severity. Both can be: `ok`, `disrupted`, `down`, `monitoring` or `maintenance`
 
-`current_severity` is used when an event is `in_progress`. `max_severity` will be used when the event is resolved to indicate what the worst state of operation was. Typically, while an event is in progress, you will first set `current_severity` to `down`. Then as you make progress towards resolution then maybe you can change the state to `disturbed` or `monitoring` after you think the problem is solved but you are monitoring to be sure it does not come back. 
+`current_severity` is used when an event is `in_progress`. `max_severity` will be used when the event is resolved to indicate what the worst state of operation was.
+
+Typically, while an event is in progress, you will first set `current_severity` to `down`. Then as you make progress towards resolution you can change the state to `disturbed` or `monitoring` after you think the problem is solved but you are monitoring to be sure it does not come back. 
+
 Once the problem is fully solved, you can set its `status` option to `resolved`. That's when we'll use the `max_severity` as it is important to remember the system was down, even though the last severity level displayed may have been `disrupted` or `monitoring` only.
 
 - `resolved_on`: an optional date and time. Required when an event has been marked as `resolved` in its `status` field.
@@ -323,7 +328,7 @@ Both original repositories are available at:
 
 Longer descriptions in header and footers can be changed from the `config.yml` file in the root folder of your ClearStatus site. Other strings and messages are available for translation or just to better suit your liking or use case.
 
-Those strings are stored in the `themes/clearstatustheme/i18n` folder. There is one file per language called for instance `en.yml`, `fr.yml`,...
+Those strings are stored in the `/themes/clearstatustheme/i18n` folder. There is one file per language called for instance `en.yml`, `fr.yml`,...
 
 > You can select the site language in the `/config.yml` file under the `languageCode` key. It defaults to `en`.
 
@@ -350,9 +355,9 @@ Should you want to add your own translation or just override one of those messag
 
 Instead, you can add an override in your site that will take over the original ClearStatus text. Proceed as follow to change text for the English language:
 
-- Create a folder `i18n` at the root of your site
+- Create a `i18n` folder at the root of your site
 - Create a file called `en.yml` in that folder
-- Insert the following to that file:
+- Insert the following in that file:
 
 ````
 - id: isDown
@@ -362,15 +367,15 @@ Instead, you can add an override in your site that will take over the original C
 
 Now the original _Something's happening here..._ will be replaced with _Houston, we have a problem..._ whenever one component in your systems is down.
 
-Note that you do not have to copy across **all** text in the original file. Just copy and modify the content you need to modify.
+Note that you do not have to copy across **all** text from the original file. Just copy and modify the content you need to modify.
 
-Should you want to add translation for a language, copy the entire `en.yml` file to `xx.yml` where xx is the desired language code and start translating.
+Should you want to add translation for another language, copy the entire `en.yml` file to `xx.yml` where xx is the desired language code and start translating.
 
 ## Enabling multilingual support
 
 ClearStatus can manage events in several languages so that you can communicate with your users in their language. Each language has **independent** content. Per language content is stored in per-language folders and if you do not provide a language-specific version of an event, it will not be displayed for that language.
 
-> At this moment, multilingual support cannot be managed throuhg the **Netlify CMS** interface. You will need to use Gitlab/Github or your own git workflow to manage content.
+> At this moment, multilingual support cannot be managed through the **Netlify CMS** interface. Use Gitlab/Github or your own git workflow to manage content.
 
 ### Enabling multilingual support.
 
@@ -404,7 +409,7 @@ Open the `/config/_default/languages.yml` file to enable and configure multiling
 #  languageName: Español
 ````
 
-As you can see, all lines in that file start with a `#`: they are commented out and have no effect. To add more languages to your site, you will need to remove the `#` symbol at the start of the desired lines and configure as needed. Here is an example for adding both Spanish and French to a site with Enlglish as the default language:
+As you can see, all lines in that file start with a `#`: they are commented out and have no effect. To add more languages to your site, you will need to remove the `#` symbol at the start of the desired lines and configure as needed. Here is an example for adding both Spanish and French to a site with English as the default language:
 
 ````
 en:
@@ -440,6 +445,8 @@ A few key points:
 For instance, adding the `title: Etat de nos systèmes` line replaces the original `title` text for French. You can also redefine the name and list of components in your systems per language
 - the `weight` parameter will determine the order of languages in the language switcher and default language.
 
+> As with all `yml` files, **indentation matters**. Be sure to respect spaces at the start of lines or else your file will be invalid and the status page won't be built.
+
 After saving and committing this configuration file, you will get the following:
 
 <p align="center"><img src="https://cdn.weeblrpress.net/clearstatus/features/multilingual-default-language-small.png" alt="Sample Clearstatus multilingual status page"></p> 
@@ -447,6 +454,125 @@ After saving and committing this configuration file, you will get the following:
 There is a language switcher added at the top. Clicking on the `Français` link goes to the following page:
 
 <p align="center"><img src="https://cdn.weeblrpress.net/clearstatus/features/multilingual-other-language-small.png" alt="Sample French Clearstatus multilingual status page"></p>
+
+## In-depth customization
+
+### Colors
+
+ClearStatus output uses the [Tailwind CSS](https://tailwindcss.com) framework. Most of the colors used throughout the status page can be modified without having to deal with Tailwind though as they are stored in parameters in the `/config/_default/params.yml` file. Here is the relevant content of that file:
+
+````
+############################################################
+## Status default config. Valid for ALL languages.
+############################################################
+
+## Source for CSS
+enablePostCSSProcessing: false
+fullCSSSourceFile: "css/src/styles.css"
+fullCSSDistFile: "css/dist/styles.css"
+postCSSConfigFolder: "themes/clearstatustheme"
+
+# Colors
+bodyBackground: "bg-grey-lighter"
+bodyColor: "text-grey-dark"
+visibleBordersColor: "border-grey-dark"
+bordersColor: "border-transparent"
+headerBackground: "bg-white"
+headerColor: "text-grey-darkest"
+footerBackground: "bg-white"
+footerColor: "text-grey-darkest"
+componentsBackground: "bg-white"
+componentsColor: "text-black"
+componentsBorders: "border-grey-lighter"
+refreshColor: "text-grey-dark"
+paginationLinksColor: "text-grey-darkest"
+disabledPaginationLinksColor: "text-grey-dark"
+
+# Severity
+defaultSeverityBackground: "bg-grey-light"
+defaultSeverityColor: "text-black"
+downSeverityBackground: "bg-red-dark"
+downSeverityColor: "text-white"
+disruptedSeverityBackground: "bg-orange-dark"
+disruptedSeverityColor: "text-white"
+monitoringSeverityBackground: "bg-orange"
+monitoringSeverityColor: "text-white"
+maintenanceSeverityBackground: "bg-grey-light"
+maintenanceSeverityColor: "text-black"
+okSeverityBackground: "bg-green-dark"
+okSeverityColor: "text-white"
+
+# Incident types
+scheduledHeaderBackground: "bg-blue-lighter"
+scheduledHeaderColor: "text-grey-dark"
+scheduledHeaderTitleColor: "text-black"
+scheduledBodyBackground: "bg-white"
+scheduledBodyColor: "text-grey-darkest"
+scheduledBodyTitleColor: "text-black"
+
+smallBodyBackground: "bg-white"
+smallBodyColor: "text-grey-darkest"
+smallBodyTitleColor: "text-black"
+
+pastBodyBackground: "bg-white"
+pastBodyColor: "text-grey-darkest"
+pastBodyTitleColor: "text-black"
+
+# Affected components
+affectedBackground: "bg-grey-lighter"
+affectedColor: "text-grey-darkest"
+
+````
+
+Various items each have a color assigned to them such as `bg-grey-lighter`  or `text-grey-dark`. Those are standard Tailwind CSS classes that each correspond to a color. Find the list of Tailwind built-in colors:
+ 
+ - [for text](https://tailwindcss.com/docs/text-color)
+ - [for backgrounds](https://tailwindcss.com/docs/background-color)
+ - [for borders](https://tailwindcss.com/docs/border-color)
+
+If you simply want to swap around colors from the existing list in `/config/_default/params.yml`, just do it, save and commit the file and your status page will be updated accordingly.
+
+If you want to use a color that is not listed already in `/config/_default/params.yml`, you will need a bit more configuration described in the paragraph below, **Even more in-depth customization**.
+
+### CSS customization / Head customization
+
+To only add a few CSS classes or override existing ones, you can insert a `<style></style>` tag in your own copy of one specific layout file.
+
+- copy `/themes/clearstatustheme/layouts/partials/custom/meta.html` to `/layouts/partials/custom/meta.html`
+
+The content of this file will be automatically included just before the closing `</head>` tag. You can also use this method to add support for an Analytics provider or other script for instance.
+
+> There are other files in that `/themes/clearstatustheme/layouts/partials/custom/` folder. Make your own copy under `/layouts` and use them to add HTML to various parts of your status page: above the header, above footer, below footer, etc
+
+### Layouts
+
+All output files are generated using **layouts** files located in the ClearStatus theme under the folder `/themes/clearstatustheme/layouts`.
+
+You can safely and completely change any of those files by creating a `/layouts` folder at the root of your status page git repo and copy the files you want to change from the `/themes/clearstatustheme/layouts` folder.
+
+Be sure to reproduce the original folders hierarchy though: `/themes/clearstatustheme/layouts/issues/single.html` should be copied to `/layouts/issues/single.html` or else ClearStatus won't pick it up.
+
+> If you only use TailwindCSS CSS classes already present in the default version of ClearStatus, there is nothing more to do. If not, follow the steps in **Even more in-depth customization** below. 
+
+### Even more in-depth customization
+
+To include CSS classes from TailwindCSS that are not in the default ClearStatus version, do the following:
+
+- copy the files `/themes/clearstatustheme/package.json` and `/themes/clearstatustheme/package-lock.json` to the root of your git repository
+- run `npm install` in the root folder of your repositiry
+- change `enablePostCSSProcessing` setting from `false` to `true` in `/config/_default/params.yml`
+
+When `enablePostCSSProcessing` is set to `true`, ClearStatus will run a module called `PostCSS` to build the final CSS stylesheet starting with TailwindCSS framework. This allows including any class from TailwindCSS in an optimized manner, by including only those classes that are actually used.
+
+You can go one step further and define your own colors inside of TailwindCSS:
+
+- in `/config/_default/config.yml`, change `assetsDir: themes/clearstatustheme/assets` to `assetsDir: assets`
+- copy the `/themes/clearstatustheme/assets` folder to the root of your repository, that is to `/assets`
+- open the file `/assets/css/src/tailwind.js`
+- customize it as described on [TailwindCSS documentation](https://tailwindcss.com/docs/colors)
+- save and commit 
+
+From now on, all colors added to the `/assets/css/src/tailwind.js` configuration file can be used through your status page custom layouts. Only CSS classes actually used will be included to generate the smallest possible file.
 
 ## Credits
 
