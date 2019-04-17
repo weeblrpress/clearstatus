@@ -274,7 +274,7 @@ Here is a breakdown of options available:
 
 `current_severity` is used when an event is `in_progress`. `max_severity` will be used when the event is resolved to indicate what the worst state of operation was.
 
-Typically, while an event is in progress, you will first set `current_severity` to `down`. Then as you make progress towards resolution you can change the state to `disturbed` or `monitoring` after you think the problem is solved but you are monitoring to be sure it does not come back. 
+Typically, while an event is in progress, you will first set `current_severity` to `down`. Then as you make progress towards resolution you can change the state to `disrupted` or `monitoring` after you think the problem is solved but you are monitoring to be sure it does not come back. 
 
 Once the problem is fully solved, you can set its `status` option to `resolved`. That's when we'll use the `max_severity` as it is important to remember the system was down, even though the last severity level displayed may have been `disrupted` or `monitoring` only.
 
