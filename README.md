@@ -112,7 +112,7 @@ https://yourstatuspage.com/admin
 
 After initial setup, your ClearStatus status page has sample content and default settings, titles, etc You certainly want to change them. There are 2 ways to do that:
  
-- using your Gitlab/Github account and update files in the **project name** you choose on Netlify
+- use your Gitlab/Github account and update files in the **project name** you choose on Netlify
 - use the Netlify CMS support built-in ClearStatus which we suggested to enable earlier
 
 > You can use both methods at the same time on the same status page. All data from Netlify CMS is written to your git repository so both will always be in sync. You can also use your preferred git workflow. In the end, the status page content is updated based on the git repository content in `master` branch.
