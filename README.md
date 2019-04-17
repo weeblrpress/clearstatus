@@ -6,6 +6,8 @@ It's called a status page and should be working no matter what happens to your o
 
 We've created ClearStatus to do just that for our own operations at [WeeblrPress](https://www.weeblrpress.com) and [Weeblr](https://weeblr.com). It is open source, free for all.
 
+<p align="center"><img src="https://cdn.weeblrpress.net/clearstatus/features/event-in-progress-with-twitter-feed-small.png" alt="Clearstatus at work"></p>
+
 ## How it works
 
 ClearStatus is mostly a theme for the [Hugo CMS](https://gohugo.io). Hugo is a very fast static site generator. It does the bulk of the work, transforming a text file you write to describe an issue into a fully working status page.
@@ -46,7 +48,7 @@ When you click one of those buttons, you will be taken to the Netlify website an
 
 Just click that link and view your status page: it has some sample issues. You can start customizing it now (see below)
 
-> From this point all customization or content update can be done using your GitLab or GitHub account. You can also setup Netlify CMS to customize your status page with a simple online interface. Setting up Netlify CMS is simple and is described below.
+> From this point all customization or content update can be done using your GitLab or GitHub account. You can also setup **Netlify CMS** to customize your status page with a simple online interface. Setting up Netlify CMS is simple and is described below.
 
 ### Create a Clearstatus status page on Netlify using GITHUB
 
@@ -79,23 +81,22 @@ That's OK for testing but not best for real world operation so you probably want
 
 [NetlifyCMS](https://netlifycms.org) is a simple content management system that lets you update your ClearStatus configuration and content in a convenient interface, without having to deal with your git repository. This may be more convenient for users not familiar with git.
 
-ClearStatus comes with support for NetlifyCMS. You need to enable user authentication inside of your Netlify control panel:
+ClearStatus comes with support for NetlifyCMS. You need to enable user authentication **inside of your Netlify control panel**:
 
 1. On your team page, select the ClearStatus website you just created
 2. Select the `Settings` page and then `Identity` in the left side menu
 3. Click on `Enable identity`
 4. Scroll down to `Registration` and select `Invite only` so that only selected users can modify your page
-5. Scroll down to `External providers` and select `Github` or `Gitlab` depending on which git repo you are using.
-6. Scroll down to `Services`, then `Git gateway` and click the `Enable git gateway` button 
+5. Scroll down to `Services`, then `Git gateway` and click the `Enable git gateway` button 
 
 The final step is to invite yourself so that you can modify the site:
 
 1. On your team page, select the ClearStatus website you just created
 2. Select the `Identity` tab
 3. Click on the `Invite users` button
-4. Enter your email address in the popup dialog, and possibly that of more users
+4. Enter your email address in the popup dialog, and possibly that of more users (they'll need to have a Netlify account for this to work)
 
-Invited users receive an email invitation with a confirmation link. Clicking the *Accept invite* link in that email will take them to your site with a login prompt.
+Invited users receive an email invite with a confirmation link. Clicking the *Accept invite* link in that email will take them to your site with a login prompt.
 
 Once a user has accepted the invite, they can always access the Netlify CMS interface to add or modify content using the address:
 
@@ -111,11 +112,15 @@ After initial setup, your ClearStatus status page has sample content and default
 - using your Gitlab/Github account and update files in the **project name** you choose on Netlify
 - use the Netlify CMS support built-in ClearStatus which we suggested to enable earlier
 
-> You can use both methods at the same time on the same status page. All data from Netlify CMS is written to your git repository so both will always be in sync. 
+> You can use both methods at the same time on the same status page. All data from Netlify CMS is written to your git repository so both will always be in sync. You can also use your preferred git workflow. In the end, the status page content is updated based on the git repository content in `master` branch.
 
 ## Configuration
 
-Almost everything should be configured through the single `config.yml` file located at the root of your project root repository. You can edit that file directly from GitLab/GitHub and change it as you whish.
+Most options should be configured through the single `config.yml` file located at the root of your project root repository. You can edit that file directly from GitLab/GitHub and change it as you whish.
+
+Most likely the most important setting is the component definition: for instance if you run a website and a helpdesk, they are independant and can go down or up independantly so they are listed separately. Use the `systems` option to set them up as needed.
+
+> You can change those options as well using the **Netlify CMS** interface under the `Settings` tab.
 
 After configuring all settings and text to your liking, you should `Commit changes`. This will cause:
 
@@ -124,7 +129,8 @@ After configuring all settings and text to your liking, you should `Commit chang
 
 Wait 10-15 seconds and reload the status page: it should have all your changes now.
 
-> Most likely the most important setting is the component definition: for instance if you run a website and a helpdesk, they are independant and can go down or up independantly so they are listed separately. Use the `systems` option to set them up as needed.
+> There are several additional options files located under the `/config/_default` folder: they contain other settings including language-related ones under `languages.yml` and color-related under `params.yml`
+
 
 ## Logo change
 
@@ -134,13 +140,15 @@ Upload your logo to the `/static/images` folder using GitHub/Gitlab upload featu
 logo: "/images/our-logo.png"
 ````
 
-> Note that the "logo" setting should not include the initial /static part.
+> Note that the "logo" setting **should not include the initial /static** part.
 
 ## Entering and updating content
 
-Whenever a problem occurs on one of your systems, you will create *an issue*. An issue is actually a single file that you create in the `/content/en/issues` folder which exists in your ClearStatus installation on Gitlab/GitHub. This is assuming your site language is **en** which you may have changed in the configuration file. Adjust instructions accordingly.
+Whenever a problem occurs on one of your systems, you will create *an issue*. An issue is actually a single file that you create in the `/content/default/issues` folder which exists in your ClearStatus installation on Gitlab/GitHub. This is assuming you have enabled only one language which is the default configuration.
 
-> On multilingual setups, you should create one file per language in  `/content/en/issues`, `/content/es/issues` at least if you need to report the issue to all your audiences.
+In the following steps, we assume you are using Gitlab/Github to directly create the issue file. You can of course create it anywhere using standard git procedure. The issue will be added to the site once you push it to the `master` branch of your Clearstatus repository.
+
+> On multilingual setups, you should create one file per language in  `/content/default/issues`, `/content/es/issues`, `/content/fr/issues`  at least if you need to report the issue to all your audiences.
 
 ## Issue file naming
 
@@ -156,9 +164,9 @@ The issue file should be created with the following convention:
 
 ## Issue file content and template.
 
-The issue file should use the [markdown](https://daringfireball.net/projects/markdown/syntax) language, which is basically just text and images with little in terms of formatting and is what Hugo normally uses.
+Issue files use the [markdown](https://daringfireball.net/projects/markdown/syntax) language, which is basically just text and images with little in terms of formatting and is what [Hugo](https://gohugo.io) normally uses.
 
-The first section of the file is however used to tell ClearStatus about the, well, status of the event happening and you should use it to convey your message to visitors.
+The first section of the file is used however to tell ClearStatus about the, well, status of the event happening and you should use it to convey your message to visitors.
 
 Once you have written the current event description, use the `Commit changes` button in Github/GitLab to save the content. This will trigger an update of your status page after a few seconds.
 
@@ -198,6 +206,28 @@ resolved_on: 2019-03-30 20:45:19
 affected:
   - Site
   - Helpdesk
+
+# If set and the status is in_progress, this feed will be embedded
+# in the event display. Leave empty for no Twitter feed.
+# Possible URL formats:
+# See:  https://help.twitter.com/en/using-twitter/embed-twitter-feed
+#
+# - Profile: Display public Tweets from any user on Twitter:
+#    https://twitter.com/weeblrpress
+#  
+# - Likes: Show all Tweets a specific user has marked as likes.
+#    https://twitter.com/TwitterDev/likes
+#
+# - List: Show Tweets from public Lists that you own and/or subscribe to.
+#    https://twitter.com/TwitterDev/lists/national-parks
+# 
+# - Collection: Show Tweets from a curated collection.
+#    https://twitter.com/WeeblrPress/timelines/1118432874733219840
+#
+# - Moment: Show Tweets from a public moment.
+#    https://twitter.com/i/moments/625792726546558977
+#
+twitterFeed:
 
 section: issue
 
@@ -242,6 +272,8 @@ Once the problem is fully solved, you can set its `status` option to `resolved`.
 
 - `affected`: a list of components that are affected by the event. Add one component per line and use exactly the same name you used on your configuration file.
 
+- `twitterFeed`: an optional Twitter feed or collections. If provided, the feed will be embedded in the issue card as long as it is marked as `in_progress`. We specifically recommend creating a [Twitter collection](https://developer.twitter.com/en/docs/tweets/curate-a-collection/overview/overview.html) for this purpose. This way only tweets related to that specific issue will be displayed.
+
 - `body`: the body of the event is just a plain text you can write to describe it. You can add to, remove from or update that text to your liking using markdown for nicer formatting. 
  
 ## Getting started (manual setup)
@@ -256,13 +288,13 @@ ClearStatus comes in 2 flavors or rather 2 git repositories:
 
 Alternatively, you can clone only the `clearstatustheme` repository in your own repo and just configure it for your own hosting as needed.
 
-Make sure to clone the `clearstatustheme` with **submodules** or else you will only get the main site without the status theme. For instance:
+Make sure to clone the `clearstatustheme` with **submodules** or else you will only get the main site without the Clearstatus theme. For instance:
 
 ````
 git clone --recurse-submodules https://github.com/weeblrpress/clearstatus.git mystatuspage
 ````
 
-You can update the ClearStatus theme, whenever a new version is available, by running the following from the root of the main repository:
+You can update the ClearStatus theme whenever a new version is available by running the following from the root of the main repository:
 
 ````  
 git submodule foreach git pull origin master
@@ -280,7 +312,7 @@ Both original repositories are available at:
 - [https://gitlab.com/weeblrpress/clearstatus](https://github.com/weeblrpress/clearstatus)
 - [https://github.com/weeblrpress/clearstatus](https://gitlab.com/weeblrpress/clearstatus)
 
-> Please us the [Github clearstatus repository](https://github.com/weeblrpress/clearstatustheme/issues) for any issue you may have, suggested changes or pull requests
+> Please us the [Github Clearstatus repository](https://github.com/weeblrpress/clearstatustheme/issues) for any issue you may have, suggested changes or pull requests
 
 ## Credits
 
