@@ -11,17 +11,17 @@ We've created ClearStatus to do just that for our own operations at [WeeblrPress
 ## Key features
 
 - easy and reliable communication with your users
-- Twitter integration
-- Disqus commenting on each issue
-- Pinned issue for security alerts
 - One click implementation
 - 100% independent from your own infrastructure
 - Custom domain with HTTPS (Netlify)
 - Worldwide CDN delivery (Netlify)
 - High-availability (Netlify)
+- Twitter integration
+- Disqus commenting on each issue
+- Pinned issue for security alerts
 - 100% secure: static content cannot be hacked
 - All content under you control
-- Unlimited users, issues
+- Unlimited users, issues and status pages
 - Mobile/tablets/desktop
 - Highly customizable and expandable
 
@@ -33,7 +33,7 @@ ClearStatus is mostly a theme for the [Hugo CMS](https://gohugo.io). Hugo is a v
 
 > When hosting your status pages at Netlify as suggested below, all the transformation process is automatic. You do not need to perform any additional setup or configuration and you'll never have to deal with Hugo yourself (not that Hugo is difficult, quite the opposite in fact!)
 
-Now any web page must be hosted on a server to be available. We suggest and use ourselves [Netlify](https://netlify.com) to host ClearStatus pages because setting up the whole thing can pretty much be done with a couple of clicks (just see below). In addition, it will be free including an SSL certificate for your site.
+Now any web page must be hosted on a server to be available. We suggest and use ourselves [Netlify](https://netlify.com) to host ClearStatus pages because setting up the whole thing can pretty much be done with a couple of clicks (just see below). In addition, it will be free including an SSL certificate for your site, serverd over a worldwide CDN and in a high-availability configuration.
 
 The last part missing is a repository for your content, that is the issues description and updates. That content needs to be stored in a GIT repository. You can use your own git repositories if you are a developer but we suggest you sign up for free accounts at [GitLab.com](https://gitlab.com) or [GitHub.com](https://github.com). Those 2 will work perfectly with ClearStatus. 
 
@@ -156,7 +156,7 @@ Wait 10-15 seconds and reload the status page: it should have all your changes n
 
 ## Logo change
 
-Upload your logo to the `/static/images` folder using GitHub/Gitlab upload feature. Then make sure the corresponding logo name is correctly set in  `config.yml`
+You can include your organization log in all pages header. Upload your logo to the `/static/images` folder using GitHub/Gitlab upload feature. Then make sure the corresponding logo name is correctly set in  `config.yml`. Leave that setting empty if you do not have any logo.
 
 ````
 logo: "/images/our-logo.png"
@@ -259,6 +259,13 @@ affected:
 #
 twitterFeed:
 
+# Enable Disqus commenting on this page. This will only works if 
+# you added your Disqus identifier in the global config.yml file
+# under the disqusShortname option.
+# enabledDisqus: true | false
+enableComments: true
+
+# Do not change
 section: issue
 
 # Short code available in content to display current date
@@ -315,7 +322,11 @@ Once the problem is fully solved, you can set its `status` option to `resolved`.
 
 - `twitterFeed`: an optional Twitter feed or collections. If provided, the feed will be embedded in the issue card as long as it is marked as `in_progress`. We specifically recommend creating a [Twitter collection](https://developer.twitter.com/en/docs/tweets/curate-a-collection/overview/overview.html) for this purpose. This way only tweets related to that specific issue will be displayed.
 
-- `body`: the body of the event is just a plain text you can write to describe it. You can add to, remove from or update that text to your liking using markdown for nicer formatting. 
+- `enableComments`: another excellent way to communicate directly with your users. Clearstatus can include commenting on each issue individual page. You can enable/disable commenting per issue. The only pre-requisite is to set your [Disqus shortname](https://disqus.com) under the `disqusShortname` option in the global configuration file. You will of course need to set up a Disqus account for your status page to make this work.
+
+> We advise to use a dedicated shortname for your status page, separate from any other Disqus shortname you may be using on your other websites.
+
+- `body`: the body is the free text area located after the `---` line (do not touch or remove this line by the way). It is just plain text you can write to describe it. You can add to, remove from or update that text to your liking using markdown for nicer formatting. 
  
 ## Getting started (manual setup)
 

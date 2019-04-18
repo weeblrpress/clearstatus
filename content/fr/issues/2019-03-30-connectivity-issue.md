@@ -56,6 +56,12 @@ affected:
 #
 twitterFeed:
 
+# Enable Disqus commenting on this page. This will only works if 
+# you added your Disqus identifier in the global config.yml file
+# under the disqusShortname option.
+# enabledDisqus: true | false
+enableComments: true
+
 ## Do not change
 section: issue
 
