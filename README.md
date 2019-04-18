@@ -8,6 +8,23 @@ We've created ClearStatus to do just that for our own operations at [WeeblrPress
 
 <p align="center"><img src="https://cdn.weeblrpress.net/clearstatus/features/event-in-progress-with-twitter-feed-small.png" alt="Clearstatus at work"></p>
 
+## Key features
+
+- easy and reliable communication with your users
+- Twitter integration
+- Disqus commenting on each issue
+- One click implementation
+- 100% independent from your own infrastructure
+- Custom domain with HTTPS
+- Worldwide CDN delivery
+- High-availability
+- 100% secure: static content, cannot be hacked
+- All content under you control
+- Unlimited users, issues
+- Mobile/tablets/desktop
+- Highly customizable and expandable
+- 100% free setup and operation
+
 ## How it works
 
 ClearStatus is mostly a theme for the [Hugo CMS](https://gohugo.io). Hugo is a very fast static site generator. It does the bulk of the work, transforming a text file you write to describe an issue into a fully working status page.
