@@ -10,7 +10,7 @@ We've created ClearStatus to do just that for our own operations at [WeeblrPress
 
 ## Key features
 
-- easy and reliable communication with your users
+- Easy and reliable communication with your users
 - One click implementation
 - 100% independent from your own infrastructure
 - Custom domain with HTTPS (Netlify)
@@ -20,7 +20,7 @@ We've created ClearStatus to do just that for our own operations at [WeeblrPress
 - Disqus commenting on each issue
 - Pinned issue for security alerts
 - 100% secure: static content cannot be hacked
-- All content under you control
+- All content under your control
 - Unlimited users, issues and status pages
 - Mobile/tablets/desktop
 - Highly customizable and expandable
