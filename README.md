@@ -13,17 +13,19 @@ We've created ClearStatus to do just that for our own operations at [WeeblrPress
 - easy and reliable communication with your users
 - Twitter integration
 - Disqus commenting on each issue
+- Pinned issue for security alerts
 - One click implementation
 - 100% independent from your own infrastructure
-- Custom domain with HTTPS
-- Worldwide CDN delivery
-- High-availability
-- 100% secure: static content, cannot be hacked
+- Custom domain with HTTPS (Netlify)
+- Worldwide CDN delivery (Netlify)
+- High-availability (Netlify)
+- 100% secure: static content cannot be hacked
 - All content under you control
 - Unlimited users, issues
 - Mobile/tablets/desktop
 - Highly customizable and expandable
-- 100% free setup and operation
+
+And 100% free setup and operation with all the above included
 
 ## How it works
 
