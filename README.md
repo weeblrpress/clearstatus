@@ -1,14 +1,13 @@
-# ClearStatus - Professional status page - 5 minutes - Free
+<img align="center" src="https://cdn.weeblrpress.net/clearstatus/assets/images/clearstatus-200.svg" alt="ClearStatus Logo">
 
-<img align="right" src="https://cdn.weeblrpress.net/clearstatus/assets/images/clearstatus-150.svg" alt="ClearStatus Logo">
+# ClearStatus - Professional status page - 5 minutes - Free
 
 You run a website or an app? Have one or more systems your customers/community depends on? if something goes wrong and your site is down, we think what matters most is that you are able to communicate clearly and easily with your users: be transparent about the problem, what you do to solve it and when you're or will be back online.
 
 It's called a status page and should be working no matter what happens to your own site and app. And it should be simple. And preferably cheap or free.
 
+<img align="right" src="https://cdn.weeblrpress.net/clearstatus/features/event-in-progress-with-twitter-feed-small.png" alt="Clearstatus at work">
 We've created ClearStatus to do just that for our own operations at [WeeblrPress](https://www.weeblrpress.com) and [Weeblr](https://weeblr.com). It is open source, free for all.
-
-<p align="center"><img src="https://cdn.weeblrpress.net/clearstatus/features/event-in-progress-with-twitter-feed-small.png" alt="Clearstatus at work"></p>
 
 ## Key features
 
