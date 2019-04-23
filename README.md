@@ -1,6 +1,6 @@
 # ClearStatus - Professional status page - 5 minutes - Free
 
-<img src="https://cdn.weeblrpress.net/clearstatus/assets/images/clearstatus-150.svg" alt="ClearStatus Logo"></p>
+<p align="center"><img src="https://cdn.weeblrpress.net/clearstatus/assets/images/clearstatus-150.svg" alt="ClearStatus Logo"></p>
 
 You run a website or an app? Have one or more systems your customers/community depends on? if something goes wrong and your site is down, we think what matters most is that you are able to communicate clearly and easily with your users: be transparent about the problem, what you do to solve it and when you're or will be back online.
 
@@ -35,7 +35,7 @@ ClearStatus is mostly a theme for the [Hugo CMS](https://gohugo.io). Hugo is a v
 
 > When hosting your status pages at Netlify as suggested below, all the transformation process is automatic. You do not need to perform any additional setup or configuration and you'll never have to deal with Hugo yourself (not that Hugo is difficult, quite the opposite in fact!)
 
-Now any web page must be hosted on a server to be available. We suggest and use ourselves [Netlify](https://netlify.com) to host ClearStatus pages because setting up the whole thing can pretty much be done with a couple of clicks (just see below). In addition, it will be free including an SSL certificate for your site, serverd over a worldwide CDN and in a high-availability configuration.
+Now any web page must be hosted on a server to be available. We suggest and use ourselves [Netlify](https://netlify.com) to host ClearStatus pages because setting up the whole thing can pretty much be done with a couple of clicks (just see below). In addition, it will be free including an SSL certificate for your site, served over a worldwide CDN and in a high-availability configuration.
 
 The last part missing is a repository for your content, that is the issues description and updates. That content needs to be stored in a GIT repository. You can use your own git repositories if you are a developer but we suggest you sign up for free accounts at [GitLab.com](https://gitlab.com) or [GitHub.com](https://github.com). Those 2 will work perfectly with ClearStatus. 
 
