@@ -8,7 +8,7 @@ It's called a status page and should be working no matter what happens to your o
 
 <img align="right" src="https://cdn.weeblrpress.net/clearstatus/features/event-in-progress-with-twitter-feed-small.png" alt="Clearstatus at work">
 
-We've created ClearStatus to do just that for our own operations at [WeeblrPress](https://www.weeblrpress.com) and [Weeblr](https://weeblr.com). It is open source, free for all.
+We've created ClearStatus to do just that for our own operations at [WeeblrPress](https://www.weeblrpress.com) and [Weeblr](https://weeblr.com) and it is now open-source and available for all.
 
 ## Key features
 
@@ -21,7 +21,7 @@ We've created ClearStatus to do just that for our own operations at [WeeblrPress
 - Twitter integration
 - Disqus commenting on each issue
 - Pinned issue for security alerts
-- 100% secure: static content cannot be hacked
+- Secure: static content is hard to hack
 - All content under your control
 - Unlimited users, issues and status pages
 - Mobile/tablets/desktop
@@ -37,7 +37,7 @@ ClearStatus is mostly a theme for the [Hugo CMS](https://gohugo.io). Hugo is a v
 
 > When hosting your status pages at Netlify as suggested below, all the transformation process is automatic. You do not need to perform any additional setup or configuration and you'll never have to deal with Hugo yourself (not that Hugo is difficult, quite the opposite in fact!)
 
-Now any web page must be hosted on a server to be available. We suggest and use ourselves [Netlify](https://netlify.com) to host ClearStatus pages because setting up the whole thing can pretty much be done with a couple of clicks (just see below). In addition, it will be free including an SSL certificate for your site, served over a worldwide CDN and in a high-availability configuration.
+Now any web page must be hosted on a server. We suggest and use ourselves [Netlify](https://netlify.com) to host ClearStatus pages because setting up the whole thing can pretty much be done with a couple of clicks (just see below). In addition, it will be free including an SSL certificate for your site, served over a worldwide CDN and in a high-availability configuration.
 
 The last part missing is a repository for your content, that is the issues description and updates. That content needs to be stored in a GIT repository. You can use your own git repositories if you are a developer but we suggest you sign up for free accounts at [GitLab.com](https://gitlab.com) or [GitHub.com](https://github.com). Those 2 will work perfectly with ClearStatus. 
 
@@ -63,7 +63,7 @@ or:
 
 The easiest way to enable your status page is to use the **Deploy to Netlify** buttons below. Depending on whether you have/prefer to host your git repository on GitHub or GitLab, select one of the buttons below.
 
-> Note that you will need to have signed up for a Gitlab or Github account and a Netlify account prior to getting started.
+> Sign up for a Gitlab or Github account and a Netlify account prior to getting started.
 
 When you click one of those buttons, you will be taken to the Netlify website and the following will happen:
 
