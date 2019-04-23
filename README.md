@@ -1,4 +1,4 @@
-<img align="center" src="https://cdn.weeblrpress.net/clearstatus/assets/images/clearstatus-200.svg" alt="ClearStatus Logo">
+<p align="center"><img src="https://cdn.weeblrpress.net/clearstatus/assets/images/clearstatus-200.svg" alt="ClearStatus Logo"></p>
 
 # ClearStatus - Professional status page - 5 minutes - Free
 
@@ -27,6 +27,8 @@ We've created ClearStatus to do just that for our own operations at [WeeblrPress
 - Highly customizable and expandable
 
 And 100% free setup and operation with all the above included
+
+<p>&nbsp;</p>
 
 ## How it works
 
