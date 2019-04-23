@@ -7,6 +7,7 @@ You run a website or an app? Have one or more systems your customers/community d
 It's called a status page and should be working no matter what happens to your own site and app. And it should be simple. And preferably cheap or free.
 
 <img align="right" src="https://cdn.weeblrpress.net/clearstatus/features/event-in-progress-with-twitter-feed-small.png" alt="Clearstatus at work">
+
 We've created ClearStatus to do just that for our own operations at [WeeblrPress](https://www.weeblrpress.com) and [Weeblr](https://weeblr.com). It is open source, free for all.
 
 ## Key features
