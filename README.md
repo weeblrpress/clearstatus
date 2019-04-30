@@ -1,5 +1,7 @@
 <p align="center"><img src="https://cdn.weeblrpress.net/clearstatus/assets/images/clearstatus-200.svg" alt="ClearStatus Logo"></p>
 
+[![ClearStatus into video link](http://img.youtube.com/vi/wFF2OBPfalQ/0.jpg)](http://www.youtube.com/watch?v=wFF2OBPfalQ "ClearStatus status page intro video")
+
 # ClearStatus - Professional status page - 5 minutes - Free
 
 You run a website or an app? Have one or more systems your customers/community depends on? if something goes wrong and your site is down, we think what matters most is that you are able to communicate clearly and easily with your users: be transparent about the problem, what you do to solve it and when you're or will be back online.
