@@ -1,6 +1,6 @@
 <p align="center"><img src="https://cdn.weeblrpress.net/clearstatus/assets/images/clearstatus-200.svg" alt="ClearStatus Logo"></p>
 
-[![ClearStatus into video link](http://img.youtube.com/vi/wFF2OBPfalQ/0.jpg)](http://www.youtube.com/watch?v=wFF2OBPfalQ "ClearStatus status page intro video")
+<p align="center"><a title="ClearStatus into video link" href="https://www.youtube.com/watch?v=wFF2OBPfalQ"><img src="https://img.youtube.com/vi/wFF2OBPfalQ/0.jpg" alt="ClearStatus status page intro video"></a></p>
 
 # ClearStatus - Professional status page - 5 minutes - Free
 
