@@ -37,6 +37,10 @@ And 100% free setup and operation with all the above included
 
 ## How it works
 
+<p align="center">Can't wait? view our video on settin up and using ClearStatus. Just click the image below</p>
+<p align="center"><a title="ClearStatus setup and usage video link" href="https://www.youtube.com/watch?v=f6gM84hD9Ug"><img src="https://img.youtube.com/vi/f6gM84hD9Ug/0.jpg" alt="ClearStatus status page setup and usage video"></a></p>
+
+
 ClearStatus is mostly a theme for the [Hugo CMS](https://gohugo.io). Hugo is a very fast static site generator. It does the bulk of the work, transforming a text file you write to describe an issue into a fully working status page.
 
 > When hosting your status pages at Netlify as suggested below, all the transformation process is automatic. You do not need to perform any additional setup or configuration and you'll never have to deal with Hugo yourself (not that Hugo is difficult, quite the opposite in fact!)
