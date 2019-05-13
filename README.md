@@ -27,7 +27,7 @@ We've created ClearStatus to do just that for our own operations at [WeeblrPress
 - Pinned issue for security alerts
 - Secure: static content is hard to hack
 - All content under your control
-- Unlimited users, issues and status pages
+- Multiple users, issues and status pages
 - Mobile/tablets/desktop
 - Highly customizable and expandable
 
