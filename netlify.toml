@@ -1,13 +1,13 @@
 [build]
-    command = "git submodule foreach git pull origin master && hugo --minify"
-    publish = "public"
+command = "git submodule foreach git pull origin master && npm install && hugo --minify"
+publish = "public"
 
 [context.production.environment]
-    HUGO_ENV = "production"
-    NODE_ENV = "production"
+HUGO_ENV = "production"
+NODE_ENV = "production"
 
 [context.deploy-preview]
-    command = "git submodule foreach git pull origin master && hugo -b $DEPLOY_PRIME_URL"
+command = "git submodule foreach git pull origin master && npm install && hugo -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
-command = "git submodule foreach git pull origin master && hugo -b $DEPLOY_PRIME_URL"
+command = "git submodule foreach git pull origin master && npm install && hugo -b $DEPLOY_PRIME_URL"
