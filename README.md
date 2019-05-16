@@ -639,3 +639,4 @@ From now on, all colors added to the `/assets/css/src/tailwind.js` configuration
 This project is loosely inspired by [CState](https://github.com/cstate/cstate) and started out both out of different requirements and the desire to work with Hugo, Netlify, Go templates and such.
 
 
+_(version 2.0.0)_
