@@ -1,8 +1,10 @@
 # ClearStatus changelog #
 
-### Build date: 2019-05-16 19:36 ###
+### Build date: 2019-05-16 20:00 ###
 
 <hr />
+
+## Version 2.0.0 (2019-05-16) ##
 
 **New**
 - Added support for grouping systems and displaying them under collapsible headers
