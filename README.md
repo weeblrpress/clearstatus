@@ -155,9 +155,7 @@ Most options should be configured through the single `config.yml` file located a
 
 Most likely the most important setting is the component definition: for instance if you run a website and a helpdesk, they are independent and can go down or up independently so they are listed separately. Use the `systems` option to set them up as needed.
 
-If you have a large number of systems, you can create groups and assign some or all of your systems to a group. Systems which are part of a group are displayed together under a clickable group title. This keeps your status page readable even if you have dozens of systems to report on.
-
-<img align="center" src="https://cdn.weeblrpress.net/clearstatus/features/systems-list-with-groups.png" alt="Clearstatus systems list with groups">
+Note that grouped system can go up and down independently. The status of the group is the worst case: if 5 systems in a group are up but the 6th one is `Disrupted` then the group will be shown as `Disrupted`. If one system is `Down` and another is `Disrupted`, then the group will be shown as `Down`.
 
 > You can change those options as well using the **Netlify CMS** interface under the `Settings` tab.
 
