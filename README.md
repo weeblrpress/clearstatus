@@ -25,6 +25,7 @@ We've created ClearStatus to do just that for our own operations at [WeeblrPress
 - Twitter integration
 - Disqus commenting on each issue
 - Pinned issue for security alerts
+- Individual systems can be grouped
 - Secure: static content is hard to hack
 - All content under your control
 - Multiple users, issues and status pages
@@ -153,6 +154,10 @@ After initial setup, your ClearStatus status page has sample content and default
 Most options should be configured through the single `config.yml` file located at the root of your project root repository. You can edit that file directly from GitLab/GitHub and change it as you whish.
 
 Most likely the most important setting is the component definition: for instance if you run a website and a helpdesk, they are independent and can go down or up independently so they are listed separately. Use the `systems` option to set them up as needed.
+
+If you have a large number of systems, you can create groups and assign some or all of your systems to a group. Systems which are part of a group are displayed together under a clickable group title. This keeps your status page readable even if you have dozens of systems to report on.
+
+<img align="center" src="https://cdn.weeblrpress.net/clearstatus/features/systems-list-with-groups.png" alt="Clearstatus systems list with groups">
 
 > You can change those options as well using the **Netlify CMS** interface under the `Settings` tab.
 
