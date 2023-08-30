@@ -316,7 +316,7 @@ Here is a breakdown of options available:
 
 `resolved` events are listed at the bottom of the page, with a neutral colored header
 
-`scheduled` events are listed just below the list of components (systems) on your page with a lighlty colored header.
+`scheduled` events are listed just below the list of components (systems) on your page with a lightly colored header.
 
 - `pinned`: if you set this to `top` or `belowheader` and set its status to `in_progress`, the event will be taken out of the regular display and will show at the very top of each page or just below the header, respectively. This is meant to display an important message in a prominent manner to all visitors such as a security warning. Once the status is reset to anything else but `in_progress`, the event will not be displayed anywhere anymore.
 
