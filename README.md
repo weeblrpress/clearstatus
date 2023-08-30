@@ -411,7 +411,7 @@ Here is a sample content from the `en.yml` file:
   translation: All systems operational.
 ````
 
-Should you want to add your own translation or just override one of those messages, you should not modify directly those files as this would make updating ClearStatus more dificult.
+Should you want to add your own translation or just override one of those messages, you should not modify directly those files as this would make updating ClearStatus more difficult.
 
 Instead, you can add an override in your site that will take over the original ClearStatus text. Proceed as follow to change text for the English language:
 
