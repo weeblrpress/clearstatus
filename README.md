@@ -61,7 +61,7 @@ As a matter of fact, you can easily embed relevant tweets to a specific issue so
 
 Either:
 
-- a Gitlab.com or GitHub.com account
+- a GitLab.com or GitHub.com account
 - a Netlify account for easy and automated setup and operation
 
 or:
@@ -72,11 +72,11 @@ or:
 
 The easiest way to enable your status page is to use the **Deploy to Netlify** buttons below. Depending on whether you have/prefer to host your git repository on GitHub or GitLab, select one of the buttons below.
 
-> Sign up for a Gitlab or GitHub account and a Netlify account prior to getting started.
+> Sign up for a GitLab or GitHub account and a Netlify account prior to getting started.
 
 When you click one of those buttons, you will be taken to the Netlify website and the following will happen:
 
-- They'll ask you to connect your Gitlab or GitHub account
+- They'll ask you to connect your GitLab or GitHub account
 - They'll ask you for **a project name** (you can create as many status pages as you like by the way)
 - They'll start building your status page for you, it should take roughly 10 or 15 seconds
 - The status page will be available at a weird URL such as https://tender-goodall-bd0396.netlify.com/ (you'll find the exact link on the Netlify page)
@@ -91,11 +91,11 @@ Deploy to Netlify with one click from GitHub:
 
 [![Deploy to Netlify from GitHub](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/weeblrpress/clearstatus)
 
-### Create a Clearstatus status page on Netlify using GITLAB
+### Create a Clearstatus status page on Netlify using GitLab
 
 Deploy to Netlify with one click from GitLab: 
 
-[![Deploy to Netlify from Gitlab.com](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://gitlab.com/weeblrpress/clearstatus)
+[![Deploy to Netlify from GitLab.com](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://gitlab.com/weeblrpress/clearstatus)
 
 ## Netlify configuration
 
@@ -144,7 +144,7 @@ https://yourstatuspage.com/admin
 
 After initial setup, your ClearStatus status page has sample content and default settings, titles, etc You certainly want to change them. There are 2 ways to do that:
  
-- use your Gitlab/GitHub account and update files in the **project name** you choose on Netlify
+- use your GitLab/GitHub account and update files in the **project name** you choose on Netlify
 - use the Netlify CMS support built-in ClearStatus which we suggested to enable earlier
 
 > You can use both methods at the same time on the same status page. All data from Netlify CMS is written to your git repository so both will always be in sync. You can also use your preferred git workflow. In the end, the status page content is updated based on the git repository content in `master` branch.
@@ -164,7 +164,7 @@ Note that grouped system can go up and down independently. The status of the gro
 
 After configuring all settings and text to your liking, you should `Commit changes`. This will cause:
 
-- your file to be updated on GitHub/Gitlab
+- your file to be updated on GitHub/GitLab
 - and it will also trigger a rebuild of the status page to take your changes into account at Netlify. 
 
 Wait 10-15 seconds and reload the status page: it should have all your changes now.
@@ -174,7 +174,7 @@ Wait 10-15 seconds and reload the status page: it should have all your changes n
 
 ## Logo change
 
-You can include your organization log in all pages header. Upload your logo to the `/static/images` folder using GitHub/Gitlab upload feature. Then make sure the corresponding logo name is correctly set in  `config.yml`. Leave that setting empty if you do not have any logo.
+You can include your organization log in all pages header. Upload your logo to the `/static/images` folder using GitHub/GitLab upload feature. Then make sure the corresponding logo name is correctly set in  `config.yml`. Leave that setting empty if you do not have any logo.
 
 ````
 logo: "/images/our-logo.png"
@@ -184,9 +184,9 @@ logo: "/images/our-logo.png"
 
 ## Entering and updating content
 
-Whenever a problem occurs on one of your systems, you will create *an issue*. An issue is actually a single file that you create in the `/content/default/issues` folder which exists in your ClearStatus installation on Gitlab/GitHub. This is assuming you have enabled only one language which is the default configuration.
+Whenever a problem occurs on one of your systems, you will create *an issue*. An issue is actually a single file that you create in the `/content/default/issues` folder which exists in your ClearStatus installation on GitLab/GitHub. This is assuming you have enabled only one language which is the default configuration.
 
-In the following steps, we assume you are using Gitlab/GitHub to directly create the issue file. You can of course create it anywhere using standard git procedure. The issue will be added to the site once you push it to the `master` branch of your Clearstatus repository.
+In the following steps, we assume you are using GitLab/GitHub to directly create the issue file. You can of course create it anywhere using standard git procedure. The issue will be added to the site once you push it to the `master` branch of your Clearstatus repository.
 
 > On multilingual setups, you should create one file per language in  `/content/default/issues`, `/content/es/issues`, `/content/fr/issues`  at least if you need to report the issue to all your audiences.
 
@@ -435,7 +435,7 @@ Should you want to add translation for another language, copy the entire `en.yml
 
 ClearStatus can manage events in several languages so that you can communicate with your users in their language. Each language has **independent** content. Per language content is stored in per-language folders and if you do not provide a language-specific version of an event, it will not be displayed for that language.
 
-> At this moment, multilingual support cannot be managed through the **Netlify CMS** interface. Use Gitlab/GitHub or your own git workflow to manage content.
+> At this moment, multilingual support cannot be managed through the **Netlify CMS** interface. Use GitLab/GitHub or your own git workflow to manage content.
 
 ### Enabling multilingual support.
 
