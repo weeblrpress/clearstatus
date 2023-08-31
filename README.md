@@ -619,7 +619,7 @@ Be sure to reproduce the original folders hierarchy though: `/themes/clearstatus
 To include CSS classes from TailwindCSS that are not in the default ClearStatus version, do the following:
 
 - copy the files `/themes/clearstatustheme/package.json` and `/themes/clearstatustheme/package-lock.json` to the root of your git repository
-- run `npm install` in the root folder of your repositiry
+- run `npm install` in the root folder of your repository
 - change `enablePostCSSProcessing` setting from `false` to `true` in `/config/_default/params.yml`
 
 When `enablePostCSSProcessing` is set to `true`, ClearStatus will run a module called `PostCSS` to build the final CSS stylesheet starting with TailwindCSS framework. This allows including any class from TailwindCSS in an optimized manner, by including only those classes that are actually used.
