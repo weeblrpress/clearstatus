@@ -61,7 +61,7 @@ As a matter of fact, you can easily embed relevant tweets to a specific issue so
 
 Either:
 
-- a Gitlab.com or Github.com account
+- a Gitlab.com or GitHub.com account
 - a Netlify account for easy and automated setup and operation
 
 or:
@@ -72,11 +72,11 @@ or:
 
 The easiest way to enable your status page is to use the **Deploy to Netlify** buttons below. Depending on whether you have/prefer to host your git repository on GitHub or GitLab, select one of the buttons below.
 
-> Sign up for a Gitlab or Github account and a Netlify account prior to getting started.
+> Sign up for a Gitlab or GitHub account and a Netlify account prior to getting started.
 
 When you click one of those buttons, you will be taken to the Netlify website and the following will happen:
 
-- They'll ask you to connect your Gitlab or Github account
+- They'll ask you to connect your Gitlab or GitHub account
 - They'll ask you for **a project name** (you can create as many status pages as you like by the way)
 - They'll start building your status page for you, it should take roughly 10 or 15 seconds
 - The status page will be available at a weird URL such as https://tender-goodall-bd0396.netlify.com/ (you'll find the exact link on the Netlify page)
@@ -89,7 +89,7 @@ Just click that link and view your status page: it has some sample issues. You c
 
 Deploy to Netlify with one click from GitHub: 
 
-[![Deploy to Netlify from Github](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/weeblrpress/clearstatus)
+[![Deploy to Netlify from GitHub](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/weeblrpress/clearstatus)
 
 ### Create a Clearstatus status page on Netlify using GITLAB
 
@@ -144,7 +144,7 @@ https://yourstatuspage.com/admin
 
 After initial setup, your ClearStatus status page has sample content and default settings, titles, etc You certainly want to change them. There are 2 ways to do that:
  
-- use your Gitlab/Github account and update files in the **project name** you choose on Netlify
+- use your Gitlab/GitHub account and update files in the **project name** you choose on Netlify
 - use the Netlify CMS support built-in ClearStatus which we suggested to enable earlier
 
 > You can use both methods at the same time on the same status page. All data from Netlify CMS is written to your git repository so both will always be in sync. You can also use your preferred git workflow. In the end, the status page content is updated based on the git repository content in `master` branch.
@@ -186,7 +186,7 @@ logo: "/images/our-logo.png"
 
 Whenever a problem occurs on one of your systems, you will create *an issue*. An issue is actually a single file that you create in the `/content/default/issues` folder which exists in your ClearStatus installation on Gitlab/GitHub. This is assuming you have enabled only one language which is the default configuration.
 
-In the following steps, we assume you are using Gitlab/Github to directly create the issue file. You can of course create it anywhere using standard git procedure. The issue will be added to the site once you push it to the `master` branch of your Clearstatus repository.
+In the following steps, we assume you are using Gitlab/GitHub to directly create the issue file. You can of course create it anywhere using standard git procedure. The issue will be added to the site once you push it to the `master` branch of your Clearstatus repository.
 
 > On multilingual setups, you should create one file per language in  `/content/default/issues`, `/content/es/issues`, `/content/fr/issues`  at least if you need to report the issue to all your audiences.
 
@@ -210,7 +210,7 @@ Issue files use the [markdown](https://daringfireball.net/projects/markdown/synt
 
 The first section of the file is used however to tell ClearStatus about the, well, status of the event happening and you should use it to convey your message to visitors.
 
-Once you have written the current event description, use the `Commit changes` button in Github/GitLab to save the content. This will trigger an update of your status page after a few seconds.
+Once you have written the current event description, use the `Commit changes` button in GitHub/GitLab to save the content. This will trigger an update of your status page after a few seconds.
 
 When the issue status changes, for instance when it's resolved or some more information is available, come back to this page, modify the event file and use `Commit changes` again to update your status page.
 
@@ -382,7 +382,7 @@ Both original repositories are available at:
 - [https://gitlab.com/weeblrpress/clearstatus](https://github.com/weeblrpress/clearstatus)
 - [https://github.com/weeblrpress/clearstatus](https://gitlab.com/weeblrpress/clearstatus)
 
-> Please us the [Github Clearstatus repository](https://github.com/weeblrpress/clearstatustheme/issues) for any issue you may have, suggested changes or pull requests
+> Please us the [GitHub Clearstatus repository](https://github.com/weeblrpress/clearstatustheme/issues) for any issue you may have, suggested changes or pull requests
 
 ## Changing text - Translation
 
@@ -435,7 +435,7 @@ Should you want to add translation for another language, copy the entire `en.yml
 
 ClearStatus can manage events in several languages so that you can communicate with your users in their language. Each language has **independent** content. Per language content is stored in per-language folders and if you do not provide a language-specific version of an event, it will not be displayed for that language.
 
-> At this moment, multilingual support cannot be managed through the **Netlify CMS** interface. Use Gitlab/Github or your own git workflow to manage content.
+> At this moment, multilingual support cannot be managed through the **Netlify CMS** interface. Use Gitlab/GitHub or your own git workflow to manage content.
 
 ### Enabling multilingual support.
 
