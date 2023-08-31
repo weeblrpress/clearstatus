@@ -38,7 +38,7 @@ And 100% free setup and operation with all the above included
 
 ## How it works
 
-<p align="center">Can't wait? view our video on settin up and using ClearStatus. Just click the image below</p>
+<p align="center">Can't wait? view our video on setting up and using ClearStatus. Just click the image below</p>
 <p align="center"><a title="ClearStatus setup and usage video link" href="https://www.youtube.com/watch?v=f6gM84hD9Ug"><img src="https://img.youtube.com/vi/f6gM84hD9Ug/0.jpg" alt="ClearStatus status page setup and usage video"></a></p>
 
 
@@ -55,13 +55,13 @@ By using ClearStatus, GitLab or GitHub and Netlify, you can create and customize
 You can and should use other media to communicate such as Twitter. But tweets come and go and quickly disappear in the Twitter feeds - when they are not simply hidden by Twitter algorithms. Your status page provides a fixed location where your users can go and be updated.
 As a matter of fact, you can easily embed relevant tweets to a specific issue so you get best of both worlds as you can see in the screenshot above.
 
-> Did we mention ClearStatus is multilingal? if you so desire, your status page will have a language switcher and separate content per language. Messages for English, Spanish and French are built-in and you can easily add your own.
+> Did we mention ClearStatus is multilingual? if you so desire, your status page will have a language switcher and separate content per language. Messages for English, Spanish and French are built-in and you can easily add your own.
 
 ## Requirements
 
 Either:
 
-- a Gitlab.com or Github.com account
+- a GitLab.com or GitHub.com account
 - a Netlify account for easy and automated setup and operation
 
 or:
@@ -72,11 +72,11 @@ or:
 
 The easiest way to enable your status page is to use the **Deploy to Netlify** buttons below. Depending on whether you have/prefer to host your git repository on GitHub or GitLab, select one of the buttons below.
 
-> Sign up for a Gitlab or Github account and a Netlify account prior to getting started.
+> Sign up for a GitLab or GitHub account and a Netlify account prior to getting started.
 
 When you click one of those buttons, you will be taken to the Netlify website and the following will happen:
 
-- They'll ask you to connect your Gitlab or Github account
+- They'll ask you to connect your GitLab or GitHub account
 - They'll ask you for **a project name** (you can create as many status pages as you like by the way)
 - They'll start building your status page for you, it should take roughly 10 or 15 seconds
 - The status page will be available at a weird URL such as https://tender-goodall-bd0396.netlify.com/ (you'll find the exact link on the Netlify page)
@@ -89,13 +89,13 @@ Just click that link and view your status page: it has some sample issues. You c
 
 Deploy to Netlify with one click from GitHub: 
 
-[![Deploy to Netlify from Github](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/weeblrpress/clearstatus)
+[![Deploy to Netlify from GitHub](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/weeblrpress/clearstatus)
 
-### Create a Clearstatus status page on Netlify using GITLAB
+### Create a Clearstatus status page on Netlify using GitLab
 
 Deploy to Netlify with one click from GitLab: 
 
-[![Deploy to Netlify from Gitlab.com](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://gitlab.com/weeblrpress/clearstatus)
+[![Deploy to Netlify from GitLab.com](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://gitlab.com/weeblrpress/clearstatus)
 
 ## Netlify configuration
 
@@ -144,7 +144,7 @@ https://yourstatuspage.com/admin
 
 After initial setup, your ClearStatus status page has sample content and default settings, titles, etc You certainly want to change them. There are 2 ways to do that:
  
-- use your Gitlab/Github account and update files in the **project name** you choose on Netlify
+- use your GitLab/GitHub account and update files in the **project name** you choose on Netlify
 - use the Netlify CMS support built-in ClearStatus which we suggested to enable earlier
 
 > You can use both methods at the same time on the same status page. All data from Netlify CMS is written to your git repository so both will always be in sync. You can also use your preferred git workflow. In the end, the status page content is updated based on the git repository content in `master` branch.
@@ -164,7 +164,7 @@ Note that grouped system can go up and down independently. The status of the gro
 
 After configuring all settings and text to your liking, you should `Commit changes`. This will cause:
 
-- your file to be updated on GitHub/Gitlab
+- your file to be updated on GitHub/GitLab
 - and it will also trigger a rebuild of the status page to take your changes into account at Netlify. 
 
 Wait 10-15 seconds and reload the status page: it should have all your changes now.
@@ -174,7 +174,7 @@ Wait 10-15 seconds and reload the status page: it should have all your changes n
 
 ## Logo change
 
-You can include your organization log in all pages header. Upload your logo to the `/static/images` folder using GitHub/Gitlab upload feature. Then make sure the corresponding logo name is correctly set in  `config.yml`. Leave that setting empty if you do not have any logo.
+You can include your organization log in all pages header. Upload your logo to the `/static/images` folder using GitHub/GitLab upload feature. Then make sure the corresponding logo name is correctly set in  `config.yml`. Leave that setting empty if you do not have any logo.
 
 ````
 logo: "/images/our-logo.png"
@@ -184,9 +184,9 @@ logo: "/images/our-logo.png"
 
 ## Entering and updating content
 
-Whenever a problem occurs on one of your systems, you will create *an issue*. An issue is actually a single file that you create in the `/content/default/issues` folder which exists in your ClearStatus installation on Gitlab/GitHub. This is assuming you have enabled only one language which is the default configuration.
+Whenever a problem occurs on one of your systems, you will create *an issue*. An issue is actually a single file that you create in the `/content/default/issues` folder which exists in your ClearStatus installation on GitLab/GitHub. This is assuming you have enabled only one language which is the default configuration.
 
-In the following steps, we assume you are using Gitlab/Github to directly create the issue file. You can of course create it anywhere using standard git procedure. The issue will be added to the site once you push it to the `master` branch of your Clearstatus repository.
+In the following steps, we assume you are using GitLab/GitHub to directly create the issue file. You can of course create it anywhere using standard git procedure. The issue will be added to the site once you push it to the `master` branch of your Clearstatus repository.
 
 > On multilingual setups, you should create one file per language in  `/content/default/issues`, `/content/es/issues`, `/content/fr/issues`  at least if you need to report the issue to all your audiences.
 
@@ -210,7 +210,7 @@ Issue files use the [markdown](https://daringfireball.net/projects/markdown/synt
 
 The first section of the file is used however to tell ClearStatus about the, well, status of the event happening and you should use it to convey your message to visitors.
 
-Once you have written the current event description, use the `Commit changes` button in Github/GitLab to save the content. This will trigger an update of your status page after a few seconds.
+Once you have written the current event description, use the `Commit changes` button in GitHub/GitLab to save the content. This will trigger an update of your status page after a few seconds.
 
 When the issue status changes, for instance when it's resolved or some more information is available, come back to this page, modify the event file and use `Commit changes` again to update your status page.
 
@@ -316,7 +316,7 @@ Here is a breakdown of options available:
 
 `resolved` events are listed at the bottom of the page, with a neutral colored header
 
-`scheduled` events are listed just below the list of components (systems) on your page with a lighlty colored header.
+`scheduled` events are listed just below the list of components (systems) on your page with a lightly colored header.
 
 - `pinned`: if you set this to `top` or `belowheader` and set its status to `in_progress`, the event will be taken out of the regular display and will show at the very top of each page or just below the header, respectively. This is meant to display an important message in a prominent manner to all visitors such as a security warning. Once the status is reset to anything else but `in_progress`, the event will not be displayed anywhere anymore.
 
@@ -382,7 +382,7 @@ Both original repositories are available at:
 - [https://gitlab.com/weeblrpress/clearstatus](https://github.com/weeblrpress/clearstatus)
 - [https://github.com/weeblrpress/clearstatus](https://gitlab.com/weeblrpress/clearstatus)
 
-> Please us the [Github Clearstatus repository](https://github.com/weeblrpress/clearstatustheme/issues) for any issue you may have, suggested changes or pull requests
+> Please us the [GitHub Clearstatus repository](https://github.com/weeblrpress/clearstatustheme/issues) for any issue you may have, suggested changes or pull requests
 
 ## Changing text - Translation
 
@@ -411,7 +411,7 @@ Here is a sample content from the `en.yml` file:
   translation: All systems operational.
 ````
 
-Should you want to add your own translation or just override one of those messages, you should not modify directly those files as this would make updating ClearStatus more dificult.
+Should you want to add your own translation or just override one of those messages, you should not modify directly those files as this would make updating ClearStatus more difficult.
 
 Instead, you can add an override in your site that will take over the original ClearStatus text. Proceed as follow to change text for the English language:
 
@@ -435,7 +435,7 @@ Should you want to add translation for another language, copy the entire `en.yml
 
 ClearStatus can manage events in several languages so that you can communicate with your users in their language. Each language has **independent** content. Per language content is stored in per-language folders and if you do not provide a language-specific version of an event, it will not be displayed for that language.
 
-> At this moment, multilingual support cannot be managed through the **Netlify CMS** interface. Use Gitlab/Github or your own git workflow to manage content.
+> At this moment, multilingual support cannot be managed through the **Netlify CMS** interface. Use GitLab/GitHub or your own git workflow to manage content.
 
 ### Enabling multilingual support.
 
@@ -619,7 +619,7 @@ Be sure to reproduce the original folders hierarchy though: `/themes/clearstatus
 To include CSS classes from TailwindCSS that are not in the default ClearStatus version, do the following:
 
 - copy the files `/themes/clearstatustheme/package.json` and `/themes/clearstatustheme/package-lock.json` to the root of your git repository
-- run `npm install` in the root folder of your repositiry
+- run `npm install` in the root folder of your repository
 - change `enablePostCSSProcessing` setting from `false` to `true` in `/config/_default/params.yml`
 
 When `enablePostCSSProcessing` is set to `true`, ClearStatus will run a module called `PostCSS` to build the final CSS stylesheet starting with TailwindCSS framework. This allows including any class from TailwindCSS in an optimized manner, by including only those classes that are actually used.

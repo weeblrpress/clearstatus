@@ -11,7 +11,7 @@
 - Added changelog
 
 **Changes**
-- Invoke npm install explicitely on Netlify builds, Netlify caching does not handle postCSS
+- Invoke npm install explicitly on Netlify builds, Netlify caching does not handle postCSS
 
 ## Version 1.0.0 (2019-05-14) ##
 
